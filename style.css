@@ -436,6 +436,17 @@ body {
   margin-bottom: 16px;
 }
 
+.timeline-summary {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: var(--bg-light);
+  border-left: 3px solid var(--primary-color);
+  border-radius: 4px;
+}
+
 .timeline-description {
   list-style: none;
   color: var(--text-secondary);
