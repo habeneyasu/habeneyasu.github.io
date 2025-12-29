@@ -141,14 +141,14 @@
             <h3 class="timeline-title">Lead Data Scientist & Analytics Engineer</h3>
             <div class="timeline-company">Kifiya AIM (Kifiya AI Mastery Intensive Program)</div>
             <div class="timeline-date"> November 2025 - Present | Addis Ababa, Ethiopia</div>
-            <p class="timeline-summary">Delivered 6 production-grade analytics and ML engineering projects over 6 weeks, spanning financial analytics, renewable energy assessment, insurance risk modeling, NLP-powered product insights, credit scoring, and fraud detection. Architected end-to-end data pipelines with automated EDA, statistical analysis, and MLOps workflows. Built interactive dashboards and deployed containerized APIs, establishing reproducible analytics frameworks and CI/CD pipelines for enterprise-grade solutions.</p>
+            <p class="timeline-summary">Delivered 6 production-grade analytics and ML engineering projects spanning financial analytics, renewable energy assessment, insurance risk modeling, NLP-powered product insights, credit scoring, and fraud detection. Architected end-to-end data pipelines with automated EDA, statistical analysis, and MLOps workflows. Built interactive dashboards and deployed containerized APIs, establishing reproducible analytics frameworks and CI/CD pipelines for enterprise-grade solutions.</p>
             <ul class="timeline-description">
-              <li><strong>Week 6 (Dec 24-30, 2025) - Fraud Shield ML - Production MLOps Pipeline:</strong> Architected and deployed end-to-end fraud detection system for Adey Innovations Inc., unifying e-commerce and banking transaction data. Built Stacking Ensemble (XGBoost + LightGBM) achieving 95%+ recall while reducing false positives by 40%. Integrated SHAP explainability, handled extreme class imbalance (< 1% fraud) using SMOTE, and deployed containerized FastAPI microservice with sub-100ms latency. Established full MLOps pipeline with MLflow, Docker, and GitHub Actions CI/CD, reducing alert investigation time by 25%</li>
-              <li><strong>Week 5 (Dec 17-23, 2025) - Monica - Buy-Now-Pay-Later Credit Scoring Model:</strong> Architected production-ready credit scoring system for Bati Bank, transforming alternative eCommerce transaction data (RFM) into predictive risk probability using K-Means clustering. Implemented secure, Basel II-compliant risk scoring API with full MLOps pipeline including MLflow integration, Docker containerization, and production-ready FastAPI deployment</li>
-              <li><strong>Week 4 (Dec 10-16, 2025) - Fintech App Review Analytics Pipeline:</strong> Implemented data engineering and analytics system scraping Google Play Store reviews for Ethiopian fintech apps. Performed sentiment and thematic NLP analysis, stored processed results in PostgreSQL, and generated actionable insights to improve customer experience and product development</li>
-              <li><strong>Week 3 (Dec 3-9, 2025) - Insurance Risk Analytics Platform:</strong> Engineered end-to-end insurance risk analytics system for AlphaCare Insurance Solutions featuring comprehensive EDA, A/B hypothesis testing, DVC-based data versioning, and predictive modeling. Identified low-risk customer segments and optimized premium pricing strategies through advanced statistical analysis</li>
-              <li><strong>Week 2 (Nov 26 - Dec 2, 2025) - Solar Farm Data Analysis System:</strong> Architected solar data analysis system processing 10M+ environmental measurements across Benin, Sierra Leone, and Togo. Developed automated EDA pipelines reducing analysis time by 60% through statistical profiling. Built interactive Streamlit dashboard enabling real-time solar potential ranking and cross-country comparison for decision support</li>
-              <li><strong>Week 1 (Nov 19-25, 2025) - Financial News Sentiment Analysis System:</strong> Developed data analytics platform exploring how financial news sentiment influences stock price movements. Implemented comprehensive EDA, sentiment scoring using NLP techniques, technical indicators analysis, and correlation analysis to build predictive signals for market forecasting</li>
+              <li><strong>Fraud Shield ML - Production MLOps Pipeline (Dec 24-30, 2025):</strong> Architected and deployed end-to-end fraud detection system for Adey Innovations Inc., unifying e-commerce and banking transaction data. Built Stacking Ensemble (XGBoost + LightGBM) achieving 95%+ recall while reducing false positives by 40%. Integrated SHAP explainability, handled extreme class imbalance (< 1% fraud) using SMOTE, and deployed containerized FastAPI microservice with sub-100ms latency. Established full MLOps pipeline with MLflow, Docker, and GitHub Actions CI/CD, reducing alert investigation time by 25%</li>
+              <li><strong>Monica - Buy-Now-Pay-Later Credit Scoring Model (Dec 17-23, 2025):</strong> Architected production-ready credit scoring system for Bati Bank, transforming alternative eCommerce transaction data (RFM) into predictive risk probability using K-Means clustering. Implemented secure, Basel II-compliant risk scoring API with full MLOps pipeline including MLflow integration, Docker containerization, and production-ready FastAPI deployment</li>
+              <li><strong>Fintech App Review Analytics Pipeline (Dec 10-16, 2025):</strong> Implemented data engineering and analytics system scraping Google Play Store reviews for Ethiopian fintech apps. Performed sentiment and thematic NLP analysis, stored processed results in PostgreSQL, and generated actionable insights to improve customer experience and product development</li>
+              <li><strong>Insurance Risk Analytics Platform (Dec 3-9, 2025):</strong> Engineered end-to-end insurance risk analytics system for AlphaCare Insurance Solutions featuring comprehensive EDA, A/B hypothesis testing, DVC-based data versioning, and predictive modeling. Identified low-risk customer segments and optimized premium pricing strategies through advanced statistical analysis</li>
+              <li><strong>Solar Farm Data Analysis System (Nov 26 - Dec 2, 2025):</strong> Architected solar data analysis system processing 10M+ environmental measurements across Benin, Sierra Leone, and Togo. Developed automated EDA pipelines reducing analysis time by 60% through statistical profiling. Built interactive Streamlit dashboard enabling real-time solar potential ranking and cross-country comparison for decision support</li>
+              <li><strong>Financial News Sentiment Analysis System (Nov 19-25, 2025):</strong> Developed data analytics platform exploring how financial news sentiment influences stock price movements. Implemented comprehensive EDA, sentiment scoring using NLP techniques, technical indicators analysis, and correlation analysis to build predictive signals for market forecasting</li>
             </ul>
           </div>
         </div>
@@ -363,20 +363,27 @@
               </div>
             </div>
             <p class="project-description">
-              Production-grade MLOps pipeline for real-time fraud detection, architected with ensemble methods and deep learning models 
-              to identify suspicious transaction patterns. Implemented automated model retraining with MLflow, feature drift detection, 
-              and A/B testing framework. Deployed as containerized microservice integrated with payment processing systems, providing 
-              sub-100ms latency fraud alerts and comprehensive risk assessment at scale.
+              <strong>The Challenge:</strong> Adey Innovations Inc., a FinTech leader, needed a robust fraud detection system to secure both e-commerce and banking transactions. The core challenge was dual: achieving high detection accuracy on extremely imbalanced datasets (fraud < 1%) while minimizing false positives to maintain customer trust, all within a framework that supported real-time decisions and operational transparency.
             </p>
-            <p class="project-impact"><strong>Impact:</strong> Achieves 95%+ fraud detection accuracy, reducing false positives by 40% and enabling real-time transaction approval.</p>
+            <p class="project-description">
+              <strong>My Role & Approach:</strong> As the Lead Data Scientist, I architected and deployed a machine learning system that unified data from two distinct sources—tabular e-commerce logs and anonymized bank transactions—into a single, explainable detection pipeline, following full MLOps principles.
+            </p>
+            <p class="project-description">
+              <strong>Key Technical Implementation:</strong> Cleaned and merged the Fraud_Data.csv and creditcard.csv datasets. For e-commerce data, performed geolocation integration by mapping IP addresses to countries and engineered critical time-based features like time_since_signup and transaction velocity. Addressed the critical imbalance using SMOTE (Synthetic Minority Over-sampling Technique) on the training set and employed Stratified K-Fold Cross-Validation to ensure reliable performance estimation, prioritizing Precision-Recall AUC and F1-Score as primary metrics over accuracy. Built and compared multiple models, selecting a Stacking Ensemble of XGBoost and LightGBM as the champion model after rigorous hyperparameter tuning via Grid Search. Integrated SHAP (SHapley Additive exPlanations) analysis to demystify the model's "black-box" nature, generating summary plots for global feature importance and force plots for individual predictions. Containerized the inference service with Docker, managed the complete model lifecycle (experiment tracking, versioning, staging) with MLflow, and established an automated CI/CD pipeline using GitHub Actions for testing and deployment.
+            </p>
+            <p class="project-impact"><strong>Results & Impact:</strong> The final ensemble model achieved 95%+ recall (identifying nearly all fraudulent transactions) while reducing false positives by 40%, directly improving security without harming the user experience. The containerized FastAPI microservice delivered risk scores with sub-100ms latency, enabling instant transaction approval workflows. SHAP analysis identified the top 5 fraud drivers (e.g., time_since_signup < 1 hour, transaction velocity, geolocation mismatch), allowing the fraud ops team to reduce alert investigation time by 25% and refine business rules. The MLflow-integrated, version-controlled system provided a complete audit trail for all model decisions, which is crucial for regulatory compliance in finance.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">Machine Learning</span>
-              <span class="tech-tag">Deep Learning</span>
-              <span class="tech-tag">MLOps</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">XGBoost</span>
+              <span class="tech-tag">LightGBM</span>
+              <span class="tech-tag">imbalanced-learn (SMOTE)</span>
+              <span class="tech-tag">SHAP</span>
               <span class="tech-tag">MLflow</span>
-              <span class="tech-tag">FastAPI</span>
               <span class="tech-tag">Docker</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">PostgreSQL</span>
             </div>
           </div>
           <div class="project-card" data-project-type="ai-ml">
