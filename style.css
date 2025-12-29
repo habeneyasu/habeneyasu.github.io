@@ -25,9 +25,12 @@
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   color: var(--text-primary);
-  line-height: 1.6;
+  line-height: 1.7;
   background-color: var(--bg-primary);
   overflow-x: hidden;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .container {
@@ -189,6 +192,48 @@ body {
   opacity: 0.95;
 }
 
+.hero-stats-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 32px;
+  padding: 20px 32px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  flex-wrap: wrap;
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.hero-stat-number {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero-stat-divider {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
 .hero-description {
   font-size: 1.125rem;
   margin-bottom: 32px;
@@ -257,7 +302,7 @@ body {
 
 /* Section Styles */
 .section {
-  padding: 80px 0;
+  padding: 96px 0;
 }
 
 .section-alt {
@@ -267,7 +312,8 @@ body {
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
+  letter-spacing: -0.5px;
   text-align: center;
   color: var(--text-primary);
 }
@@ -281,10 +327,10 @@ body {
 }
 
 .about-text p {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   font-size: 1.125rem;
   color: var(--text-secondary);
-  line-height: 1.8;
+  line-height: 1.85;
 }
 
 .about-stats {
@@ -342,7 +388,7 @@ body {
 .timeline-item {
   position: relative;
   padding-left: 80px;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 
 .timeline-marker {
@@ -393,12 +439,15 @@ body {
 .timeline-description {
   list-style: none;
   color: var(--text-secondary);
+  line-height: 1.8;
+  margin-top: 12px;
 }
 
 .timeline-description li {
-  margin-bottom: 8px;
-  padding-left: 24px;
+  margin-bottom: 12px;
+  padding-left: 28px;
   position: relative;
+  font-size: 0.95rem;
 }
 
 .timeline-description li::before {
@@ -406,7 +455,8 @@ body {
   position: absolute;
   left: 0;
   color: var(--primary-color);
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 /* Skills Section */
@@ -547,7 +597,7 @@ body {
 
 .project-card {
   background: white;
-  padding: 32px;
+  padding: 36px;
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -633,27 +683,33 @@ body {
 
 .project-description {
   color: var(--text-secondary);
-  margin-bottom: 16px;
-  line-height: 1.7;
+  margin-bottom: 20px;
+  line-height: 1.75;
   flex-grow: 1;
+  font-size: 0.95rem;
 }
 
 .project-impact {
   color: var(--text-primary);
-  font-size: 0.95rem;
-  margin-top: 16px;
-  padding: 16px;
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
-  border-left: 4px solid var(--primary-color);
+  font-size: 1rem;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.12));
+  border-left: 5px solid var(--primary-color);
   border-radius: 8px;
-  line-height: 1.6;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.1);
+  line-height: 1.7;
+  box-shadow: 0 3px 12px rgba(99, 102, 241, 0.15);
+  font-weight: 500;
 }
 
 .project-impact strong {
   color: var(--primary-color);
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  display: block;
+  margin-bottom: 6px;
+  letter-spacing: 0.3px;
 }
 
 .project-tech {
@@ -837,8 +893,21 @@ body {
 .footer {
   background-color: var(--text-primary);
   color: white;
-  padding: 32px 0;
+  padding: 40px 0;
   text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.footer-text {
+  flex: 1;
+  min-width: 250px;
 }
 
 .footer p {
@@ -849,6 +918,37 @@ body {
 .footer-note {
   font-size: 0.9rem;
   opacity: 0.7;
+}
+
+.footer-social {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer-social-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 10px 16px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  opacity: 0.9;
+}
+
+.footer-social-link:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.footer-social-link svg {
+  width: 20px;
+  height: 20px;
 }
 
 /* Responsive Design */
@@ -898,17 +998,46 @@ body {
     font-size: 1rem;
   }
 
+  .hero-stats-bar {
+    gap: 16px;
+    padding: 16px 20px;
+  }
+
+  .hero-stat-number {
+    font-size: 1.5rem;
+  }
+
+  .hero-stat-label {
+    font-size: 0.75rem;
+  }
+
+  .hero-stat-divider {
+    font-size: 1.25rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
   .section-title {
     font-size: 2rem;
+    margin-bottom: 40px;
   }
 
   .about-content {
     grid-template-columns: 1fr;
+    gap: 32px;
   }
 
   .about-stats {
     flex-direction: row;
     justify-content: space-around;
+    gap: 16px;
+  }
+
+  .section {
+    padding: 72px 0;
   }
 
   .timeline::before {
@@ -971,11 +1100,17 @@ body {
   }
 
   .section {
-    padding: 60px 0;
+    padding: 64px 0;
+  }
+
+  .section-title {
+    margin-bottom: 40px;
+    font-size: 1.75rem;
   }
 
   .about-stats {
     flex-direction: column;
+    gap: 24px;
   }
 
   .stat-number {
@@ -988,5 +1123,23 @@ body {
 
   .skills-intro {
     padding: 16px;
+  }
+
+  .project-card {
+    padding: 24px;
+  }
+
+  .project-impact {
+    padding: 16px;
+    font-size: 0.9rem;
+  }
+
+  .timeline-item {
+    margin-bottom: 40px;
+  }
+
+  .timeline-description li {
+    margin-bottom: 10px;
+    font-size: 0.9rem;
   }
 }
