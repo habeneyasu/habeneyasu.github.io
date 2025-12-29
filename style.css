@@ -309,6 +309,43 @@ body {
   background-color: var(--bg-secondary);
 }
 
+.section-executive {
+  padding: 64px 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+}
+
+.executive-summary-box {
+  max-width: 900px;
+  margin: 0 auto;
+  background: white;
+  padding: 48px 56px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+}
+
+.executive-summary-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.executive-summary-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.executive-summary-text {
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -605,6 +642,48 @@ body {
   transform: translateY(-2px);
 }
 
+/* Focus Areas Section */
+.focus-areas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.focus-area-card {
+  background: white;
+  padding: 32px;
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.focus-area-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+}
+
+.focus-area-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.focus-area-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.focus-area-description {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin: 0;
+}
+
 /* Projects Section */
 .projects-subsection {
   margin-bottom: 56px;
@@ -725,6 +804,30 @@ body {
 .project-link:hover {
   color: var(--primary-dark);
   text-decoration: underline;
+}
+
+.project-intro {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06), rgba(139, 92, 246, 0.06));
+  padding: 20px 24px;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-color);
+  margin-bottom: 24px;
+}
+
+.project-intro-item {
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+.project-intro-item:last-child {
+  margin-bottom: 0;
+}
+
+.project-intro-item strong {
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
 .project-description {
@@ -901,11 +1004,75 @@ body {
   margin-top: 12px;
 }
 
+/* Forward-Looking Section */
+.future-focus-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.future-focus-text {
+  font-size: 1.125rem;
+  line-height: 1.85;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.future-focus-text:last-child {
+  margin-bottom: 0;
+}
+
+.future-focus-list {
+  list-style: none;
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0;
+}
+
+.future-focus-list li {
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  background: white;
+  border-radius: 10px;
+  border-left: 4px solid var(--primary-color);
+  box-shadow: var(--shadow-sm);
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+.future-focus-list li:last-child {
+  margin-bottom: 0;
+}
+
+.future-focus-list li strong {
+  color: var(--text-primary);
+  font-weight: 600;
+  display: block;
+  margin-bottom: 8px;
+}
+
 /* Contact Section */
 .contact-content {
   max-width: 700px;
   margin: 0 auto;
   text-align: center;
+}
+
+.contact-cta {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--text-primary);
+  margin: 24px 0 0 0;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
+  border-radius: 10px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.contact-cta strong {
+  color: var(--primary-color);
+  font-weight: 600;
 }
 
 .contact-description {

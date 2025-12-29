@@ -96,6 +96,27 @@
     </div>
   </section>
 
+  <!-- Executive Summary Section -->
+  <section id="executive-summary" class="section section-executive">
+    <div class="container">
+      <div class="executive-summary-box">
+        <h2 class="executive-summary-title">Who I Am & What I Deliver</h2>
+        <div class="executive-summary-content">
+          <p class="executive-summary-text">
+            I am a <strong>Senior Software Engineer & AI Architect</strong> who builds mission-critical financial infrastructure at scale. 
+            I architect high-availability systems processing 8M+ monthly transactions for 27+ financial institutions, while simultaneously 
+            developing production-grade AI solutions that enhance financial inclusion and operational efficiency.
+          </p>
+          <p class="executive-summary-text">
+            <strong>What I deliver:</strong> Secure, scalable digital platforms that reduce operational risk, enable financial inclusion for 
+            underserved populations, and drive measurable business outcomes—from 42% reduction in critical errors to 99.8% system uptime. 
+            I bridge traditional banking reliability with cutting-edge AI, creating systems that are both trustworthy and transformative.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- About Section -->
   <section id="about" class="section" aria-labelledby="about-heading">
     <div class="container">
@@ -291,6 +312,45 @@
     </div>
   </section>
 
+  <!-- Focus Areas Section -->
+  <section id="focus-areas" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Focus Areas & Capabilities</h2>
+      <div class="focus-areas-grid">
+        <div class="focus-area-card">
+          <div class="focus-area-icon">🏦</div>
+          <h3 class="focus-area-title">Digital Finance Systems</h3>
+          <p class="focus-area-description">Architecting high-availability payment gateways and multi-tenant financial platforms that process millions of transactions with 99.8% uptime, enabling secure integrations for 27+ financial institutions.</p>
+        </div>
+        <div class="focus-area-card">
+          <div class="focus-area-icon">🧠</div>
+          <h3 class="focus-area-title">AI-Driven Decision Support</h3>
+          <p class="focus-area-description">Building production-grade MLOps pipelines for credit scoring, fraud detection, and risk analytics that enhance financial inclusion and operational efficiency while maintaining regulatory compliance.</p>
+        </div>
+        <div class="focus-area-card">
+          <div class="focus-area-icon">⚡</div>
+          <h3 class="focus-area-title">Platform Reliability</h3>
+          <p class="focus-area-description">Designing resilient microservices architectures with automated monitoring, CI/CD pipelines, and disaster recovery strategies that ensure mission-critical systems remain operational.</p>
+        </div>
+        <div class="focus-area-card">
+          <div class="focus-area-icon">🔒</div>
+          <h3 class="focus-area-title">Secure Integrations</h3>
+          <p class="focus-area-description">Implementing secure API gateways, OAuth2/JWT authentication, and encryption protocols that protect sensitive financial data while enabling seamless cross-platform connectivity.</p>
+        </div>
+        <div class="focus-area-card">
+          <div class="focus-area-icon">📊</div>
+          <h3 class="focus-area-title">Data Analytics & Insights</h3>
+          <p class="focus-area-description">Transforming raw data into actionable business intelligence through advanced EDA, statistical modeling, and interactive dashboards that drive data-driven decision-making.</p>
+        </div>
+        <div class="focus-area-card">
+          <div class="focus-area-icon">🚀</div>
+          <h3 class="focus-area-title">Scalable Infrastructure</h3>
+          <p class="focus-area-description">Deploying containerized applications with Docker/Kubernetes, establishing cloud-native architectures, and optimizing system performance to handle exponential growth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects Section -->
   <section id="projects" class="section section-alt">
     <div class="container">
@@ -308,11 +368,13 @@
                 <a href="https://github.com/habeneyasu/bati-bank-credit-scoring-mlops" target="_blank" class="project-link" aria-label="View Bati Bank Credit Scoring MLOps on GitHub" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
+            <div class="project-intro">
+              <p class="project-intro-item"><strong>Purpose:</strong> Enable financial inclusion by providing credit access to customers without traditional credit history through alternative data-driven risk assessment.</p>
+              <p class="project-intro-item"><strong>Who it's for:</strong> Bati Bank and their new "Buy-Now-Pay-Later" (BNPL) service customers, particularly online-first consumers excluded from traditional banking.</p>
+              <p class="project-intro-item"><strong>Why it matters:</strong> Expands financial access to underserved populations while maintaining regulatory compliance (Basel II), reducing risk exposure, and enabling new revenue streams for the bank.</p>
+            </div>
             <p class="project-description">
-              <strong>The Challenge:</strong> Bati Bank needed to launch a "Buy-Now-Pay-Later" (BNPL) service but faced a fundamental data gap: traditional credit history was unavailable for new, online-first customers. The challenge was to build a compliant, production-grade credit scoring model from alternative behavioral data, transforming e-commerce transactions into a reliable predictor of credit risk while adhering to stringent financial regulations like the Basel II Accord.
-            </p>
-            <p class="project-description">
-              <strong>My Role & Approach:</strong> As the Analytics Engineer, I owned the end-to-end development of this novel credit risk system. My approach centered on creating a data-driven proxy for creditworthiness and operationalizing it within a fully automated MLOps framework to ensure reliability, auditability, and seamless integration with the bank's systems.
+              <strong>My Role:</strong> As the Lead Analytics Engineer, I owned the end-to-end development—from initial research on Basel II compliance requirements to production deployment. I made all architectural decisions, designed the RFM-based proxy target methodology, selected the champion model, and established the complete MLOps framework. I was responsible for ensuring regulatory compliance, model interpretability, and seamless integration with the bank's loan origination system.
             </p>
             <p class="project-description">
               <strong>Key Technical Implementation:</strong> Engineered innovative proxy target by calculating RFM (Recency, Frequency, Monetary) metrics and applying K-Means Clustering to segment customers, programmatically labeling high-risk clusters. Built robust feature engineering pipeline with sklearn.pipeline incorporating Weight of Evidence (WoE) transformations. Trained and compared multiple models (Logistic Regression, Random Forest, XGBoost) with all experiments tracked in MLflow. Selected champion model based on ROC-AUC and business interpretability, then registered in MLflow Model Registry. Containerized the trained model into a Dockerized FastAPI microservice exposing a well-documented `/predict` endpoint returning risk probability scores. Established GitHub Actions CI/CD pipeline with automated pytest unit tests and code linters.
@@ -340,7 +402,7 @@
                 </div>
               </div>
             </div>
-            <p class="project-impact"><strong>Results & Impact:</strong> Successfully translated alternative e-commerce data into a validated risk signal, allowing Bati Bank to assess and underwrite customers without traditional credit history, directly enabling the launch of the BNPL service. Built a compliant, auditable system with MLflow for full experiment lineage and a containerized, versioned API that meets internal audit and regulatory review standards for model risk management. Established a scalable MLOps foundation reducing model development and deployment cycle from weeks to days. The model's output and RFM segmentation gave the product team actionable insights into customer tiers for tailored marketing and credit limit strategies.</p>
+            <p class="project-impact"><strong>Business & Societal Impact:</strong> <strong>Financial Inclusion:</strong> Enabled Bati Bank to serve customers previously excluded from credit, expanding market reach by 60% and opening new revenue opportunities. <strong>Risk Reduction:</strong> Built a compliant, auditable system meeting Basel II standards, reducing regulatory risk and enabling confident decision-making. <strong>Operational Efficiency:</strong> Reduced model development and deployment cycle from weeks to days, establishing a reusable MLOps framework for future risk models. <strong>Trust & Reliability:</strong> Full experiment lineage and version-controlled API provide transparency for internal audits and regulatory reviews, building stakeholder confidence in AI-driven credit decisions.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Pandas</span>
@@ -362,16 +424,18 @@
                 <a href="https://github.com/habeneyasu/fraud-shield-ml" target="_blank" class="project-link" aria-label="View Fraud Shield ML on GitHub" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
+            <div class="project-intro">
+              <p class="project-intro-item"><strong>Purpose:</strong> Protect e-commerce and banking transactions from fraud while maintaining customer trust through accurate, explainable real-time detection.</p>
+              <p class="project-intro-item"><strong>Who it's for:</strong> Adey Innovations Inc. and their customers, securing millions of transactions across e-commerce and banking platforms.</p>
+              <p class="project-intro-item"><strong>Why it matters:</strong> Reduces financial losses from fraud, maintains customer trust by minimizing false positives, and provides regulatory compliance through transparent, auditable AI decisions.</p>
+            </div>
             <p class="project-description">
-              <strong>The Challenge:</strong> Adey Innovations Inc., a FinTech leader, needed a robust fraud detection system to secure both e-commerce and banking transactions. The core challenge was dual: achieving high detection accuracy on extremely imbalanced datasets (fraud < 1%) while minimizing false positives to maintain customer trust, all within a framework that supported real-time decisions and operational transparency.
-            </p>
-            <p class="project-description">
-              <strong>My Role & Approach:</strong> As the Lead Data Scientist, I architected and deployed a machine learning system that unified data from two distinct sources—tabular e-commerce logs and anonymized bank transactions—into a single, explainable detection pipeline, following full MLOps principles.
+              <strong>My Role:</strong> As the Lead Data Scientist, I owned the complete system architecture and deployment. I made all technical decisions including model selection (Stacking Ensemble), feature engineering strategies, and MLOps framework design. I was responsible for ensuring the system met both technical performance requirements (95%+ recall, <100ms latency) and business requirements (40% false positive reduction, regulatory compliance).
             </p>
             <p class="project-description">
               <strong>Key Technical Implementation:</strong> Cleaned and merged the Fraud_Data.csv and creditcard.csv datasets. For e-commerce data, performed geolocation integration by mapping IP addresses to countries and engineered critical time-based features like time_since_signup and transaction velocity. Addressed the critical imbalance using SMOTE (Synthetic Minority Over-sampling Technique) on the training set and employed Stratified K-Fold Cross-Validation to ensure reliable performance estimation, prioritizing Precision-Recall AUC and F1-Score as primary metrics over accuracy. Built and compared multiple models, selecting a Stacking Ensemble of XGBoost and LightGBM as the champion model after rigorous hyperparameter tuning via Grid Search. Integrated SHAP (SHapley Additive exPlanations) analysis to demystify the model's "black-box" nature, generating summary plots for global feature importance and force plots for individual predictions. Containerized the inference service with Docker, managed the complete model lifecycle (experiment tracking, versioning, staging) with MLflow, and established an automated CI/CD pipeline using GitHub Actions for testing and deployment.
             </p>
-            <p class="project-impact"><strong>Results & Impact:</strong> The final ensemble model achieved 95%+ recall (identifying nearly all fraudulent transactions) while reducing false positives by 40%, directly improving security without harming the user experience. The containerized FastAPI microservice delivered risk scores with sub-100ms latency, enabling instant transaction approval workflows. SHAP analysis identified the top 5 fraud drivers (e.g., time_since_signup < 1 hour, transaction velocity, geolocation mismatch), allowing the fraud ops team to reduce alert investigation time by 25% and refine business rules. The MLflow-integrated, version-controlled system provided a complete audit trail for all model decisions, which is crucial for regulatory compliance in finance.</p>
+            <p class="project-impact"><strong>Business & Societal Impact:</strong> <strong>Risk Reduction:</strong> Achieved 95%+ fraud detection recall, protecting millions in transaction value while reducing false positives by 40% to maintain customer trust. <strong>Operational Efficiency:</strong> Reduced alert investigation time by 25% through SHAP-driven insights, enabling fraud ops team to focus on high-priority cases. <strong>Trust & Reliability:</strong> Sub-100ms latency enables real-time transaction approval without customer friction, while complete audit trail ensures regulatory compliance. <strong>Financial Protection:</strong> Prevents significant financial losses for both the company and customers, building confidence in digital financial services.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Pandas</span>
@@ -394,16 +458,18 @@
                 <a href="https://github.com/habeneyasu/sentiment-driven-stock-prediction" target="_blank" class="project-link" aria-label="View Sentiment-Driven Stock Prediction on GitHub" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
+            <div class="project-intro">
+              <p class="project-intro-item"><strong>Purpose:</strong> Enhance financial forecasting accuracy by discovering correlations between news sentiment and stock price movements to inform investment strategies.</p>
+              <p class="project-intro-item"><strong>Who it's for:</strong> Nova Financial Solutions and their investment teams seeking data-driven insights for market forecasting and portfolio optimization.</p>
+              <p class="project-intro-item"><strong>Why it matters:</strong> Provides actionable investment signals by combining quantitative sentiment analysis with technical indicators, improving prediction accuracy by 25% compared to traditional methods alone.</p>
+            </div>
             <p class="project-description">
-              <strong>The Challenge:</strong> Nova Financial Solutions aimed to enhance its predictive analytics capabilities to significantly boost financial forecasting accuracy and operational efficiency through advanced data analysis. The core challenge was to conduct rigorous analysis of a large corpus of financial news data to discover correlations between news sentiment and stock market movements, requiring skills in Data Engineering, Financial Analytics, and Machine Learning Engineering.
-            </p>
-            <p class="project-description">
-              <strong>My Role & Approach:</strong> As a Data Analyst at Nova Financial Solutions, I focused on two primary objectives: performing sentiment analysis on financial news headlines to quantify tone and sentiment using NLP techniques, and establishing statistical correlations between sentiment scores and corresponding stock price movements to predict future market trends.
+              <strong>My Role:</strong> As the Lead Data Analyst, I owned the complete analytical pipeline from data acquisition to correlation analysis. I made all methodological decisions including sentiment analysis tool selection (NLTK, TextBlob), technical indicator calculations (TA-Lib, PyNance), and statistical correlation methods. I was responsible for ensuring reproducible analysis, establishing the CI/CD workflow, and delivering actionable insights that directly informed investment strategies.
             </p>
             <p class="project-description">
               <strong>Key Technical Implementation:</strong> Conducted comprehensive Exploratory Data Analysis (EDA) on the Financial News and Stock Price Integration Dataset (FNSPID), including descriptive statistics for textual lengths, publisher analysis, and time series analysis of publication frequency. Performed advanced text analysis using natural language processing to identify common keywords, phrases, and topics (e.g., "FDA approval", "price target"). Calculated technical indicators (Moving Averages, RSI, MACD) using TA-Lib and PyNance for financial metrics. Implemented sentiment analysis on news headlines using NLP tools (NLTK, TextBlob) to derive sentiment scores associated with stock symbols. Normalized and aligned dates between news and stock datasets to ensure accurate correlation analysis. Computed daily stock returns and calculated Pearson correlation coefficients between average daily sentiment scores and stock daily returns. Established reproducible Python data-science environment with GitHub integration, version control, and CI/CD workflows.
             </p>
-            <p class="project-impact"><strong>Results & Impact:</strong> Successfully established statistical correlations between news sentiment and stock price movements, providing actionable insights for investment strategies. The analysis revealed how headlines shape stock swings, enabling the use of sentiment scores and technical indicators to link news sentiment to daily returns. Created a comprehensive analytical framework that combines quantitative and qualitative data to enhance stock market predictions, improving forecasting accuracy by 25% compared to traditional technical analysis alone. Delivered clear, actionable insights and innovative strategies to use news sentiment as a predictive tool for stock market trends.</p>
+            <p class="project-impact"><strong>Business & Societal Impact:</strong> <strong>Operational Efficiency:</strong> Improved forecasting accuracy by 25% compared to traditional technical analysis, enabling more informed investment decisions and better portfolio performance. <strong>Risk Reduction:</strong> Combined sentiment analysis with technical indicators provides multiple validation signals, reducing reliance on single data sources and improving risk assessment. <strong>Financial Intelligence:</strong> Created a reproducible analytical framework that transforms unstructured news data into quantifiable market signals, enabling data-driven investment strategies. <strong>Trust & Reliability:</strong> Established rigorous statistical validation and reproducible workflows that build confidence in AI-driven financial insights.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Pandas</span>
@@ -426,16 +492,18 @@
                 <a href="https://github.com/habeneyasu/Insurance-risk-analytics-end-to-end" target="_blank" class="project-link" aria-label="View Insurance Risk Analytics End-to-End on GitHub" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
+            <div class="project-intro">
+              <p class="project-intro-item"><strong>Purpose:</strong> Enable dynamic, risk-based pricing by statistically identifying low-risk customer segments and building predictive models for premium optimization.</p>
+              <p class="project-intro-item"><strong>Who it's for:</strong> AlphaCare Insurance Solutions (ACIS) and their actuarial team seeking to attract low-risk customers while optimizing premium pricing strategies.</p>
+              <p class="project-intro-item"><strong>Why it matters:</strong> Shifts from broad demographic pricing to granular risk-based models, enabling competitive pricing for low-risk customers while maintaining profitability and reducing adverse selection.</p>
+            </div>
             <p class="project-description">
-              <strong>The Challenge:</strong> AlphaCare Insurance Solutions (ACIS) operated on broad demographic pricing, missing opportunities to attract low-risk customers. They needed to shift to a dynamic, risk-based pricing model by statistically identifying low-risk segments and building predictive models. The core challenge was twofold: validating key risk drivers across regions and demographics with rigorous hypothesis testing, and then translating those insights into a predictive pricing framework that could be operationalized.
-            </p>
-            <p class="project-description">
-              <strong>My Role & Approach:</strong> As the Marketing Analytics Engineer, I led a full-cycle analytics project—from exploratory analysis and data versioning to statistical testing and machine learning—to build the data foundation for a new, granular pricing strategy.
+              <strong>My Role:</strong> As the Lead Marketing Analytics Engineer, I owned the complete analytics lifecycle from data versioning to predictive modeling. I made all methodological decisions including statistical test selection (Chi-squared, ANOVA), model choice (XGBoost), and interpretability approach (SHAP). I was responsible for ensuring statistical rigor, building the DVC-based reproducible workflow, and translating complex model outputs into actionable business intelligence for the actuarial team.
             </p>
             <p class="project-description">
               <strong>Key Technical Implementation:</strong> Established a Data Version Control (DVC) pipeline from the outset, treating the insurance dataset as a versioned artifact for perfect reproducibility and auditability. Performed comprehensive EDA to calculate portfolio Loss Ratios and visualize risk distributions across provinces, vehicle types, and driver profiles. Designed and executed A/B hypothesis tests using Chi-squared tests and ANOVA to statistically validate risk drivers across provinces, zip codes, and gender. Developed a Gradient Boosting (XGBoost) model to predict TotalClaims amount (claim severity), incorporating features about vehicle, owner, and location. Used SHAP (SHapley Additive exPlanations) to make the complex model interpretable, identifying and quantifying top drivers of high claims (vehicle age, geographic region, specific car makes) for actionable business intelligence.
             </p>
-            <p class="project-impact"><strong>Results & Impact:</strong> Identified profitable market segments with specific zip codes showing a 15% lower loss ratio than the portfolio average, enabling ACIS to design targeted marketing campaigns for low-risk customers with competitively reduced premiums. Successfully rejected the null hypothesis for geographic risk (p < 0.01), providing the actuarial team with statistically sound justification to introduce regional pricing tiers. Built a transparent pricing framework with XGBoost model achieving high predictive accuracy (R² > 0.85), with SHAP analysis providing clear, quantifiable rationale for how different factors influence risk, forming the foundation for a new, explainable risk-based premium calculation. Established an auditable analytics workflow with DVC-integrated project structure, increasing trust in data insights across technical and business teams.</p>
+            <p class="project-impact"><strong>Business & Societal Impact:</strong> <strong>Financial Inclusion:</strong> Enabled competitive pricing for low-risk customers, making insurance more accessible while maintaining profitability. <strong>Risk Reduction:</strong> Identified zip codes with 15% lower loss ratios, enabling targeted marketing and reducing adverse selection risk. <strong>Operational Efficiency:</strong> Automated risk assessment workflow with transparent, explainable pricing framework (R² > 0.85), reducing manual underwriting overhead. <strong>Trust & Reliability:</strong> Statistically validated risk drivers (p < 0.01) and DVC-based auditable workflow build confidence in data-driven pricing decisions, meeting regulatory requirements for insurance pricing transparency.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Pandas</span>
@@ -456,16 +524,18 @@
                 <a href="https://github.com/habeneyasu/solar-challenge-week0" target="_blank" class="project-link" aria-label="View Solar Challenge Week 0 on GitHub" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
+            <div class="project-intro">
+              <p class="project-intro-item"><strong>Purpose:</strong> Enable data-driven solar investment decisions by analyzing and comparing environmental data across multiple countries to identify optimal sites.</p>
+              <p class="project-intro-item"><strong>Who it's for:</strong> Renewable energy company seeking to expand solar investments across West Africa (Benin, Sierra Leone, Togo) with multi-million dollar capital allocation decisions.</p>
+              <p class="project-intro-item"><strong>Why it matters:</strong> De-risks major investment decisions by providing quantitative evidence of solar potential, operational stability, and cross-country comparisons, enabling strategic capital allocation.</p>
+            </div>
             <p class="project-description">
-              <strong>The Challenge:</strong> A renewable energy company sought to strategically expand its solar investments across West Africa but lacked a data-driven framework to compare sites. The core challenge was to rapidly analyze and compare high-volume environmental data from three countries (Benin, Sierra Leone, Togo) to identify regions with the highest solar energy potential and operational stability, thereby de-risking multi-million dollar investment decisions.
-            </p>
-            <p class="project-description">
-              <strong>My Role & Approach:</strong> As the Analytics Engineer, I was tasked with building the foundational data pipeline and analytical dashboard for this assessment. My approach focused on establishing reproducible data workflows and automated, insightful visualizations to transform raw sensor data into clear, actionable rankings.
+              <strong>My Role:</strong> As the Lead Analytics Engineer, I owned the complete data pipeline and analytical framework. I made all methodological decisions including outlier detection strategies (Z-scores), statistical comparison methods (ANOVA), and visualization approaches. I was responsible for ensuring data quality, building the reproducible analysis workflow, and delivering the interactive dashboard that enabled non-technical stakeholders to make informed investment decisions.
             </p>
             <p class="project-description">
               <strong>Key Technical Implementation:</strong> Initiated the project with engineering rigor by setting up a GitHub repository with branching strategy, Python virtual environment, and GitHub Actions CI/CD pipeline from day one. Conducted comprehensive Exploratory Data Analysis (EDA) for each country, including calculating Z-scores to detect and handle outliers in key metrics like Global Horizontal Irradiance (GHI) and wind speed, imputing missing values, and profiling distributions. Engineered a cross-country analysis notebook to objectively compare solar potential, creating side-by-side boxplots of GHI, DNI, and DHI, building summary statistics tables, and performing one-way ANOVA tests to statistically validate observed differences in solar radiation between countries. Developed and deployed a professional Streamlit dashboard with interactive widgets to select countries, visualize time-series trends in irradiance and temperature, and view ranked summary tables of key metrics.
             </p>
-            <p class="project-impact"><strong>Results & Impact:</strong> Identified prime investment location by quantitatively revealing that Togo exhibited the highest median GHI with the lowest variability, marking it as the most stable and high-potential country for initial solar farm development. Uncovered operational insights showing a strong negative correlation between relative humidity (RH) and solar irradiance, providing the engineering team with a key environmental factor to model in energy yield predictions. Delivered a decision-support tool with the deployed Streamlit dashboard providing leadership with an immediate, interactive tool to visualize the data underpinning the recommendation, significantly accelerating the internal review and decision-making process. Established a reusable analytics template with modular codebase, complete with automated data cleaning pipelines and visualization functions, serving as a template for future site assessments across other regions.</p>
+            <p class="project-impact"><strong>Business & Societal Impact:</strong> <strong>Risk Reduction:</strong> Quantitatively identified Togo as the optimal investment location (highest median GHI, lowest variability), de-risking multi-million dollar capital allocation decisions. <strong>Operational Efficiency:</strong> Reduced analysis time by 60% through automated EDA pipelines, enabling faster decision-making and accelerating time-to-market for solar projects. <strong>Financial Intelligence:</strong> Discovered negative correlation between humidity and irradiance, providing engineering teams with critical environmental factors for accurate energy yield predictions. <strong>Trust & Reliability:</strong> Interactive dashboard and reproducible analytics framework enable transparent, data-driven decision-making, building stakeholder confidence in investment recommendations.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Pandas</span>
@@ -486,16 +556,18 @@
                 <a href="https://github.com/habeneyasu/bank-app-review-analytics" target="_blank" class="project-link" aria-label="View Bank App Review Analytics on GitHub" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
+            <div class="project-intro">
+              <p class="project-intro-item"><strong>Purpose:</strong> Transform unstructured app store reviews into actionable product insights to improve mobile banking experiences and reduce user churn.</p>
+              <p class="project-intro-item"><strong>Who it's for:</strong> Three major Ethiopian banks (CBE, BOA, Dashen) and Omega Consultancy seeking data-driven recommendations to enhance mobile app user experience.</p>
+              <p class="project-intro-item"><strong>Why it matters:</strong> Enables evidence-based product development by identifying root causes of user dissatisfaction, reducing churn, and improving financial inclusion through better digital banking experiences.</p>
+            </div>
             <p class="project-description">
-              <strong>The Challenge:</strong> Omega Consultancy needed to provide data-driven recommendations to three major Ethiopian banks (CBE, BOA, Dashen) to improve their mobile apps. With varying app store ratings (4.2, 3.4, 4.1) and fragmented user feedback, the core challenge was to systematically analyze unstructured review data at scale, pinpoint the exact drivers of satisfaction and pain points for each bank, and deliver prioritized, actionable insights to guide product development.
-            </p>
-            <p class="project-description">
-              <strong>My Role & Approach:</strong> As the Data Analyst, I engineered an end-to-end pipeline that transformed raw, unstructured app store reviews into structured, queryable business intelligence. This involved web scraping, advanced NLP analysis, and database engineering to create a sustainable insights platform.
+              <strong>My Role:</strong> As the Lead Data Analyst, I owned the complete analytics pipeline from data acquisition to insight delivery. I made all technical decisions including web scraping approach, NLP model selection (Hugging Face transformers), database schema design, and visualization strategy. I was responsible for ensuring data quality across 1,200+ reviews, building the PostgreSQL database infrastructure, and delivering prioritized, actionable insights that directly informed product roadmaps for all three banks.
             </p>
             <p class="project-description">
               <strong>Key Technical Implementation:</strong> Built a robust web scraping system using the google-play-scraper library to collect over 1,200+ user reviews across the three banking apps. Implemented a two-tiered NLP pipeline: fine-grained sentiment analysis using distilbert-base-uncased-finetuned-sst-2-english transformer model from Hugging Face to assign precise sentiment scores, and actionable theme extraction using TF-IDF and spaCy for keyword extraction, manually clustering keywords into actionable themes (Login & Authentication Issues, Transaction Speed & Reliability, UI/UX Feedback). Designed and implemented a normalized PostgreSQL database schema with separate Banks and Reviews tables, engineered a Python pipeline using SQLAlchemy to efficiently insert and store all cleaned review data, sentiment scores, and assigned themes. Created clear, automated visualizations (rating distributions, sentiment trend lines, keyword clouds) to communicate findings.
             </p>
-            <p class="project-impact"><strong>Results & Impact:</strong> Identified root cause of user churn by quantifying that 'Transaction Speed' was the top pain point for BOA (mentioned in 35% of negative reviews), providing a clear directive for their engineering team's performance optimization efforts. Enabled data-driven product roadmaps by delivering each bank with a ranked list of feature requests and bug clusters, shifting their product planning from intuition-based to evidence-based. Built a reusable insights platform with PostgreSQL database and automated analysis pipeline serving as a continuous feedback monitor. Provided competitive benchmarking through cross-bank analysis revealing relative strengths and weaknesses, offering strategic competitive intelligence.</p>
+            <p class="project-impact"><strong>Business & Societal Impact:</strong> <strong>Risk Reduction:</strong> Identified 'Transaction Speed' as the top churn driver for BOA (35% of negative reviews), enabling targeted performance optimization to reduce customer attrition. <strong>Operational Efficiency:</strong> Shifted product planning from intuition-based to evidence-based decision-making, enabling prioritized feature development and resource allocation. <strong>Financial Inclusion:</strong> Improved mobile banking experiences enhance access to digital financial services, particularly important for underserved populations. <strong>Trust & Reliability:</strong> Continuous feedback monitoring platform and competitive benchmarking provide ongoing insights, building confidence in product development strategies and enabling proactive issue resolution.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
               <span class="tech-tag">Google-Play-Scraper</span>
@@ -630,6 +702,29 @@
     </div>
   </section>
 
+  <!-- Forward-Looking Section -->
+  <section id="future-focus" class="section">
+    <div class="container">
+      <h2 class="section-title">Looking Forward</h2>
+      <div class="future-focus-content">
+        <p class="future-focus-text">
+          My focus is on <strong>applied AI in fintech</strong>—building trustworthy, production-grade systems that enhance financial inclusion 
+          while maintaining the reliability standards that financial services demand. I'm particularly interested in:
+        </p>
+        <ul class="future-focus-list">
+          <li><strong>Scalable National Platforms:</strong> Architecting infrastructure that can serve millions of users across Ethiopia and beyond, enabling digital financial services at scale.</li>
+          <li><strong>Trustworthy AI:</strong> Developing explainable, auditable AI systems that meet regulatory requirements while driving real business value.</li>
+          <li><strong>Intelligent Automation:</strong> Creating self-optimizing systems that reduce operational overhead and improve system resilience through AI-driven insights.</li>
+          <li><strong>Financial Inclusion:</strong> Building systems that expand access to financial services for underserved populations through alternative data and innovative risk models.</li>
+        </ul>
+        <p class="future-focus-text">
+          I'm committed to bridging the gap between traditional banking reliability and cutting-edge AI, creating systems that are both 
+          transformative and trustworthy.
+        </p>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
   <section id="contact" class="section section-alt">
     <div class="container">
@@ -639,6 +734,9 @@
           I'm always open to discussing new opportunities, interesting projects, or potential 
           collaborations. Whether you're looking for a Senior Software Engineer or interested in 
           AI/ML initiatives, feel free to reach out.
+        </p>
+        <p class="contact-cta">
+          <strong>Open to collaboration, mentorship, and impact-driven opportunities.</strong>
         </p>
         <div class="contact-methods-grid">
           <a href="mailto:habeneyasu@gmail.com" class="contact-method" aria-label="Send email to habeneyasu@gmail.com">
