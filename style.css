@@ -131,6 +131,15 @@ body {
   width: 100%;
 }
 
+.nav-menu a.nav-active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.nav-menu a.nav-active::after {
+  width: 100%;
+}
+
 /* Hero Section */
 .hero {
   padding: 140px 0 80px;
@@ -403,13 +412,22 @@ body {
 /* Skills Section */
 .skills-intro {
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
 }
 
 .skills-note {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  font-style: italic;
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.skills-note strong {
+  color: var(--primary-color);
 }
 
 .skills-grid {
@@ -905,5 +923,17 @@ body {
 
   .about-stats {
     flex-direction: column;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .contact-methods-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-intro {
+    padding: 16px;
   }
 }
