@@ -3,8 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Haben Eyasu - Senior Software Engineer specializing in FinTech, Microservices, and AI/ML">
-  <title>Haben Eyasu | Senior Software Engineer</title>
+  <meta name="description" content="Haben Eyasu Akelom - Senior Software Engineer specializing in FinTech, Microservices, and AI/ML Solutions. 8+ years building scalable financial systems and production-ready AI/ML applications.">
+  <meta name="keywords" content="Senior Software Engineer, FinTech, AI/ML, MLOps, Java, Spring Boot, Python, Microservices, Software Engineering">
+  <meta name="author" content="Haben Eyasu Akelom">
+  <meta property="og:title" content="Haben Eyasu Akelom | Senior Software Engineer">
+  <meta property="og:description" content="Senior Software Engineer specializing in FinTech Systems & AI/ML Solutions">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://habeneyasu.github.io">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Haben Eyasu Akelom | Senior Software Engineer">
+  <meta name="twitter:description" content="Senior Software Engineer specializing in FinTech Systems & AI/ML Solutions">
+  <title>Haben Eyasu Akelom | Senior Software Engineer | FinTech & AI/ML</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
   <link rel="stylesheet" href="style.css">
   <style>
     /* Critical CSS fallback */
@@ -17,17 +27,22 @@
 </head>
 <body>
   <!-- Navigation -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container">
-      <div class="nav-brand">Haben Eyasu</div>
-      <ul class="nav-menu">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#certifications">Certifications</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <div class="nav-brand" aria-label="Haben Eyasu Portfolio">Haben Eyasu</div>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="nav-menu">
+        <span class="nav-toggle-icon"></span>
+        <span class="nav-toggle-icon"></span>
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <ul class="nav-menu" id="nav-menu" role="menubar">
+        <li role="none"><a href="#about" role="menuitem" aria-label="About section">About</a></li>
+        <li role="none"><a href="#experience" role="menuitem" aria-label="Experience section">Experience</a></li>
+        <li role="none"><a href="#skills" role="menuitem" aria-label="Skills section">Skills</a></li>
+        <li role="none"><a href="#projects" role="menuitem" aria-label="Projects section">Projects</a></li>
+        <li role="none"><a href="#education" role="menuitem" aria-label="Education section">Education</a></li>
+        <li role="none"><a href="#certifications" role="menuitem" aria-label="Certifications section">Certifications</a></li>
+        <li role="none"><a href="#contact" role="menuitem" aria-label="Contact section">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -42,14 +57,14 @@
         <p class="hero-subtitle">Senior Software Engineer | Fintech Systems & AI/ML Solutions</p>
         <p class="hero-description">
           Senior Software Engineer specializing in high-availability financial systems and AI-driven optimization. 
-          Proven expertise in architecting and scaling Java/Spring Boot microservices platforms. At Kacha Digital, 
-          built enterprise USSD platform processing 8M+ monthly transactions across 27+ financial institutions. 
-          Successfully leverages AI/ML for predictive scaling and intelligent error handling, resulting in 60% 
-          performance improvement and 42% reduction in critical system errors.
+          Proven expertise in architecting and scaling Java/Spring Boot microservices platforms processing 8M+ 
+          monthly transactions. Successfully leverages AI/ML for predictive scaling, resulting in 60% performance 
+          improvement and 42% reduction in critical system errors.
         </p>
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Get In Touch</a>
-          <a href="#projects" class="btn btn-secondary">View Projects</a>
+          <a href="#contact" class="btn btn-primary" aria-label="Navigate to contact section">Get In Touch</a>
+          <a href="#projects" class="btn btn-secondary" aria-label="Navigate to projects section">View Projects</a>
+          <a href="#contact" class="btn btn-resume" aria-label="Navigate to contact section for resume download" onclick="document.getElementById('resume-download-contact')?.scrollIntoView({behavior: 'smooth'}); return false;">Download Resume</a>
         </div>
         <div class="hero-social">
           <a href="mailto:habeneyasu@gmail.com" class="social-link">Email</a>
@@ -62,9 +77,9 @@
   </section>
 
   <!-- About Section -->
-  <section id="about" class="section">
+  <section id="about" class="section" aria-labelledby="about-heading">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <h2 id="about-heading" class="section-title">About Me</h2>
       <div class="about-content">
         <div class="about-text">
           <p>
@@ -84,17 +99,17 @@
             with model versioning, monitoring, and automated retraining capabilities.
           </p>
         </div>
-        <div class="about-stats">
+        <div class="about-stats" role="region" aria-label="Key achievements and metrics">
           <div class="stat-item">
-            <div class="stat-number">8+</div>
+            <div class="stat-number" data-target="8" data-suffix="+">0</div>
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">50M+</div>
+            <div class="stat-number" data-target="50" data-suffix="M+">0</div>
             <div class="stat-label">Transactions Processed</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number">99.8%</div>
+            <div class="stat-number" data-target="99.8" data-suffix="%">0</div>
             <div class="stat-label">System Uptime</div>
           </div>
         </div>
@@ -290,11 +305,12 @@
       <div class="projects-subsection">
         <h3 class="projects-subsection-title">AI/ML Projects</h3>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-project-type="ai-ml">
+            <div class="project-badge project-badge-ai">AI/ML</div>
             <div class="project-header">
               <h3 class="project-title">Bati Bank Credit Scoring MLOps</h3>
               <div class="project-links">
-                <a href="https://github.com/habeneyasu/bati-bank-credit-scoring-mlops" target="_blank" class="project-link">GitHub</a>
+                <a href="https://github.com/habeneyasu/bati-bank-credit-scoring-mlops" target="_blank" class="project-link" aria-label="View Bati Bank Credit Scoring MLOps on GitHub">GitHub</a>
               </div>
             </div>
             <p class="project-description">
@@ -313,7 +329,8 @@
               <span class="tech-tag">MLOps</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-project-type="ai-ml">
+            <div class="project-badge project-badge-ai">AI/ML</div>
             <div class="project-header">
               <h3 class="project-title">Fraud Shield ML</h3>
               <div class="project-links">
@@ -334,7 +351,8 @@
               <span class="tech-tag">Docker</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-project-type="ai-ml">
+            <div class="project-badge project-badge-ai">AI/ML</div>
             <div class="project-header">
               <h3 class="project-title">Sentiment-Driven Stock Prediction</h3>
               <div class="project-links">
@@ -355,7 +373,8 @@
               <span class="tech-tag">FastAPI</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-project-type="ai-ml">
+            <div class="project-badge project-badge-ai">AI/ML</div>
             <div class="project-header">
               <h3 class="project-title">Insurance Risk Analytics End-to-End</h3>
               <div class="project-links">
@@ -377,7 +396,8 @@
               <span class="tech-tag">CI/CD</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-project-type="ai-ml">
+            <div class="project-badge project-badge-ai">AI/ML</div>
             <div class="project-header">
               <h3 class="project-title">Solar Challenge Week 0</h3>
               <div class="project-links">
@@ -405,11 +425,12 @@
       <div class="projects-subsection">
         <h3 class="projects-subsection-title">Software Engineering Projects</h3>
         <div class="projects-grid">
-          <div class="project-card">
+          <div class="project-card" data-project-type="software">
+            <div class="project-badge project-badge-software">Software</div>
             <div class="project-header">
               <h3 class="project-title">E-commerce Microservices Platform</h3>
               <div class="project-links">
-                <a href="https://github.com/habeneyasu" target="_blank" class="project-link">GitHub</a>
+                <a href="https://github.com/habeneyasu" target="_blank" class="project-link" aria-label="View E-commerce Microservices Platform on GitHub">GitHub</a>
               </div>
             </div>
             <p class="project-description">
@@ -427,7 +448,8 @@
               <span class="tech-tag">WebFlux</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-project-type="software">
+            <div class="project-badge project-badge-software">Software</div>
             <div class="project-header">
               <h3 class="project-title">Real-Time Log File Processing Microservice</h3>
               <div class="project-links">
@@ -449,7 +471,8 @@
               <span class="tech-tag">JWT</span>
             </div>
           </div>
-          <div class="project-card">
+          <div class="project-card" data-project-type="software">
+            <div class="project-badge project-badge-software">Software</div>
             <div class="project-header">
               <h3 class="project-title">Personal Finance Tracker API</h3>
               <div class="project-links">
@@ -526,34 +549,39 @@
           collaborations. Whether you're looking for a Senior Software Engineer or interested in 
           AI/ML initiatives, feel free to reach out.
         </p>
-        <div class="contact-methods">
-          <a href="mailto:habeneyasu@gmail.com" class="contact-method">
+        <div class="contact-methods-grid">
+          <a href="mailto:habeneyasu@gmail.com" class="contact-method" aria-label="Send email to habeneyasu@gmail.com">
             <div class="contact-icon">✉️</div>
             <div class="contact-info">
               <div class="contact-label">Email</div>
               <div class="contact-value">habeneyasu@gmail.com</div>
             </div>
           </a>
-          <a href="https://linkedin.com/in/habeneyasu" target="_blank" class="contact-method">
+          <a href="https://linkedin.com/in/habeneyasu" target="_blank" class="contact-method" aria-label="Visit LinkedIn profile" rel="noopener noreferrer">
             <div class="contact-icon">💼</div>
             <div class="contact-info">
               <div class="contact-label">LinkedIn</div>
               <div class="contact-value">linkedin.com/in/habeneyasu</div>
             </div>
           </a>
-          <a href="https://github.com/habeneyasu" target="_blank" class="contact-method">
+          <a href="https://github.com/habeneyasu" target="_blank" class="contact-method" aria-label="Visit GitHub profile" rel="noopener noreferrer">
             <div class="contact-icon">💻</div>
             <div class="contact-info">
               <div class="contact-label">GitHub</div>
               <div class="contact-value">github.com/habeneyasu</div>
             </div>
           </a>
-          <a href="tel:+251942707424" class="contact-method">
+          <a href="tel:+251942707424" class="contact-method" aria-label="Call +251 942 707 424">
             <div class="contact-icon">📱</div>
             <div class="contact-info">
               <div class="contact-label">Phone</div>
               <div class="contact-value">+251 942 707 424</div>
             </div>
+          </a>
+        </div>
+        <div class="contact-resume">
+          <a href="#resume-download" class="btn btn-resume-contact" id="resume-download-contact" aria-label="Download resume PDF">
+            <span>📄</span> Download Resume
           </a>
         </div>
       </div>
@@ -569,29 +597,151 @@
   </footer>
 
   <script>
-    // Smooth scrolling for navigation links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+    // Mobile Navigation Toggle
+    (function() {
+      try {
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        if (navToggle && navMenu) {
+          navToggle.addEventListener('click', function() {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navMenu.classList.toggle('nav-menu-active');
+            navToggle.classList.toggle('nav-toggle-active');
+          });
+
+          // Close menu when clicking on a link
+          const navLinks = navMenu.querySelectorAll('a');
+          navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+              navMenu.classList.remove('nav-menu-active');
+              navToggle.classList.remove('nav-toggle-active');
+              navToggle.setAttribute('aria-expanded', 'false');
+            });
           });
         }
-      });
-    });
+      } catch (error) {
+        console.error('Error initializing mobile navigation:', error);
+      }
+    })();
+
+    // Smooth scrolling for navigation links
+    (function() {
+      try {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', function (e) {
+            const href = this.getAttribute('href');
+            if (href === '#' || href === '#resume-download') return;
+            
+            e.preventDefault();
+            const target = document.querySelector(href);
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+              });
+            }
+          });
+        });
+      } catch (error) {
+        console.error('Error initializing smooth scroll:', error);
+      }
+    })();
+
+    // Animated Counters
+    (function() {
+      try {
+        const animateCounter = (element) => {
+          const target = parseFloat(element.getAttribute('data-target'));
+          const suffix = element.getAttribute('data-suffix') || '';
+          const duration = 2000; // 2 seconds
+          const increment = target / (duration / 16); // 60fps
+          let current = 0;
+
+          const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+              if (suffix === '%') {
+                element.textContent = current.toFixed(1) + suffix;
+              } else if (suffix.includes('M+')) {
+                element.textContent = Math.floor(current) + suffix;
+              } else {
+                element.textContent = Math.floor(current) + suffix;
+              }
+              requestAnimationFrame(updateCounter);
+            } else {
+              element.textContent = target + suffix;
+            }
+          };
+
+          updateCounter();
+        };
+
+        const observerOptions = {
+          threshold: 0.5,
+          rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+              entry.target.classList.add('counted');
+              animateCounter(entry.target);
+              observer.unobserve(entry.target);
+            }
+          });
+        }, observerOptions);
+
+        const counters = document.querySelectorAll('.stat-number[data-target]');
+        counters.forEach(counter => observer.observe(counter));
+      } catch (error) {
+        console.error('Error initializing counters:', error);
+        // Fallback: show static numbers
+        document.querySelectorAll('.stat-number[data-target]').forEach(el => {
+          const target = el.getAttribute('data-target');
+          const suffix = el.getAttribute('data-suffix') || '';
+          el.textContent = target + suffix;
+        });
+      }
+    })();
 
     // Add scroll effect to navbar
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 50) {
-        navbar.classList.add('navbar-scrolled');
-      } else {
-        navbar.classList.remove('navbar-scrolled');
+    (function() {
+      try {
+        window.addEventListener('scroll', function() {
+          const navbar = document.querySelector('.navbar');
+          if (navbar) {
+            if (window.scrollY > 50) {
+              navbar.classList.add('navbar-scrolled');
+            } else {
+              navbar.classList.remove('navbar-scrolled');
+            }
+          }
+        });
+      } catch (error) {
+        console.error('Error initializing navbar scroll effect:', error);
       }
-    });
+    })();
+
+    // Resume Download Handler
+    (function() {
+      try {
+        const resumeLinks = document.querySelectorAll('#resume-download-link, #resume-download-contact');
+        resumeLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            // In a real implementation, this would link to an actual PDF file
+            // For now, we'll show an alert or you can add the actual resume file
+            alert('Resume download functionality - Please add your resume PDF file and update the href attribute.');
+            // Uncomment and update path when resume is ready:
+            // window.open('/resume/Haben_Eyasu_Resume.pdf', '_blank');
+          });
+        });
+      } catch (error) {
+        console.error('Error initializing resume download:', error);
+      }
+    })();
   </script>
 </body>
 </html>
