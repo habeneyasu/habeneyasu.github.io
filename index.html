@@ -93,15 +93,15 @@
         </div>
         <div class="about-stats" role="region" aria-label="Key achievements and metrics">
           <div class="stat-item">
-            <div class="stat-number" data-target="8" data-suffix="+">0</div>
+            <div class="stat-number" data-target="8" data-suffix="+">8+</div>
             <div class="stat-label">Years Experience</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number" data-target="50" data-suffix="M+">0</div>
+            <div class="stat-number" data-target="50" data-suffix="M+">50M+</div>
             <div class="stat-label">Transactions Processed</div>
           </div>
           <div class="stat-item">
-            <div class="stat-number" data-target="99.8" data-suffix="%">0</div>
+            <div class="stat-number" data-target="99.8" data-suffix="%">99.8%</div>
             <div class="stat-label">System Uptime</div>
           </div>
         </div>
@@ -119,7 +119,7 @@
           <div class="timeline-content">
             <h3 class="timeline-title">Analytics Engineer</h3>
             <div class="timeline-company">MoonLight Energy Solutions, Kifiya AIM</div>
-            <div class="timeline-date">November 2023 – November 2024 | Addis Ababa, Ethiopia</div>
+            <div class="timeline-date">November 2023 – October 2024 | Addis Ababa, Ethiopia</div>
             <ul class="timeline-description">
               <li>Architected solar data analysis system processing 10M+ environmental measurements across 3 countries</li>
               <li>Developed automated EDA pipelines reducing analysis time by 60% through statistical profiling</li>
@@ -650,6 +650,16 @@
           const duration = 2000; // 2 seconds
           const increment = target / (duration / 16); // 60fps
           let current = 0;
+          
+          // Get initial value from element text (fallback)
+          const initialText = element.textContent.trim();
+          if (initialText && initialText !== '0' && !initialText.match(/^0[%+]?$/)) {
+            // If element already has a value, use it as starting point
+            const match = initialText.match(/^([\d.]+)/);
+            if (match) {
+              current = parseFloat(match[1]);
+            }
+          }
 
           const updateCounter = () => {
             current += increment;
