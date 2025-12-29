@@ -736,15 +736,15 @@
       }
     })();
 
-    // Resume Download Handler - Optional: Track downloads
+    // Resume Download Handler - Simple tracking only, no interference
     (function() {
       try {
         const resumeLinks = document.querySelectorAll('.btn-resume, .btn-resume-contact');
         resumeLinks.forEach(link => {
+          // Just track clicks, don't interfere with download
           link.addEventListener('click', function() {
-            // Optional: Add analytics or tracking here
-            // The download will happen automatically via the download attribute
-            console.log('Resume download initiated');
+            console.log('Resume download clicked');
+            // Download will happen automatically via download attribute
           });
         });
       } catch (error) {
