@@ -560,6 +560,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.5px;
   z-index: 1;
+  pointer-events: none;
 }
 
 .project-badge-ai {
@@ -580,43 +581,46 @@ body {
 .project-header {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   margin-bottom: 16px;
+  gap: 16px;
+  position: relative;
+  z-index: 2;
+  padding-right: 100px;
 }
 
 .project-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 12px;
+  margin: 0;
+  flex: 1;
+  min-width: 0;
 }
 
 .project-links {
   display: flex;
   gap: 12px;
+  flex-shrink: 0;
+  align-items: flex-start;
+  position: relative;
+  z-index: 3;
+  margin-top: 0;
 }
 
 .project-link {
   color: var(--primary-color);
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
-  transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 6px;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  transition: color 0.3s ease;
+  white-space: nowrap;
+  display: inline-block;
 }
 
 .project-link:hover {
   color: var(--primary-dark);
-  background: rgba(99, 102, 241, 0.2);
-  border-color: var(--primary-color);
-  transform: translateY(-2px);
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.2);
+  text-decoration: underline;
 }
 
 .project-description {
@@ -897,6 +901,17 @@ body {
   .projects-grid,
   .education-grid {
     grid-template-columns: 1fr;
+  }
+
+  .project-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding-right: 0;
+  }
+
+  .project-links {
+    align-self: flex-start;
   }
 
   .hero-buttons {
