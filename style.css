@@ -460,6 +460,17 @@ body {
 }
 
 /* Skills Section */
+#skills {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+#skills .container {
+  display: block !important;
+  visibility: visible !important;
+}
+
 .skills-intro {
   text-align: center;
   margin-bottom: 40px;
@@ -467,6 +478,8 @@ body {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.05));
   border-radius: 12px;
   border-left: 4px solid var(--primary-color);
+  display: block !important;
+  visibility: visible !important;
 }
 
 .skills-note {
@@ -481,9 +494,13 @@ body {
 }
 
 .skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  visibility: visible !important;
+  opacity: 1 !important;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .skill-core {
@@ -510,14 +527,14 @@ body {
 
 .skill-category {
   background: white;
-  padding: 32px;
+  padding: 36px;
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block !important;
   visibility: visible !important;
   opacity: 1 !important;
-  min-height: 150px;
+  min-height: 200px;
 }
 
 .skill-category:hover {
@@ -526,12 +543,25 @@ body {
 }
 
 .skill-category-title {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 20px;
-  padding-bottom: 12px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
   border-bottom: 2px solid var(--border-color);
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.skill-category-description {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-style: italic;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .skill-tags {
@@ -687,6 +717,61 @@ body {
   line-height: 1.75;
   flex-grow: 1;
   font-size: 0.95rem;
+}
+
+.project-architecture {
+  margin: 20px 0;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.architecture-diagram {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;
+}
+
+.arch-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 100px;
+  padding: 12px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.arch-step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.25);
+}
+
+.arch-icon {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.arch-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.arch-arrow {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  font-weight: 700;
+  padding: 0 8px;
 }
 
 .project-impact {
@@ -1132,6 +1217,33 @@ body {
   .project-impact {
     padding: 16px;
     font-size: 0.9rem;
+  }
+
+  .project-architecture {
+    padding: 16px;
+  }
+
+  .architecture-diagram {
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .arch-step {
+    min-width: 80px;
+    padding: 10px;
+  }
+
+  .arch-icon {
+    font-size: 1.5rem;
+  }
+
+  .arch-label {
+    font-size: 0.75rem;
+  }
+
+  .arch-arrow {
+    font-size: 1.25rem;
+    padding: 0 4px;
   }
 
   .timeline-item {
