@@ -439,6 +439,34 @@ body {
 }
 
 /* Projects Section */
+.projects-subsection {
+  margin-bottom: 64px;
+}
+
+.projects-subsection:last-child {
+  margin-bottom: 0;
+}
+
+.projects-subsection-title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 32px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--border-color);
+  position: relative;
+}
+
+.projects-subsection-title::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--primary-color);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
