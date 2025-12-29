@@ -63,7 +63,7 @@
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary" aria-label="Navigate to contact section">Get In Touch</a>
           <a href="#projects" class="btn btn-secondary" aria-label="Navigate to projects section">View Projects</a>
-          <a href="#contact" class="btn btn-resume" aria-label="Navigate to contact section for resume download" onclick="document.getElementById('resume-download-contact')?.scrollIntoView({behavior: 'smooth'}); return false;">Download Resume</a>
+          <a href="resume.pdf" class="btn btn-resume" aria-label="Download resume PDF" download="Haben_Eyasu_Resume.pdf">Download Resume</a>
         </div>
         <div class="hero-social">
           <a href="mailto:habeneyasu@gmail.com" class="social-link">Email</a>
@@ -518,7 +518,7 @@
       <h2 class="section-title">Certifications & Training</h2>
       <div class="education-grid">
         <div class="education-card">
-          <h3 class="education-title">Kifiya AI Training Program</h3>
+          <h3 class="education-title">Kifiya AI Mastery (KAIM) Program</h3>
           <div class="education-institution">Kifiya Financial Technologies / Kifiya AIM</div>
               <div class="education-date">In Progress | Expected Completion: Q2 2025</div>
           <p class="education-description">
@@ -572,7 +572,7 @@
           </a>
         </div>
         <div class="contact-resume">
-          <a href="#resume-download" class="btn btn-resume-contact" id="resume-download-contact" aria-label="Download resume PDF">
+          <a href="resume.pdf" class="btn btn-resume-contact" id="resume-download-contact" aria-label="Download resume PDF" download="Haben_Eyasu_Resume.pdf">
             <span>📄</span> Download Resume
           </a>
         </div>
@@ -624,7 +624,7 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
           anchor.addEventListener('click', function (e) {
             const href = this.getAttribute('href');
-            if (href === '#' || href === '#resume-download') return;
+            if (href === '#') return;
             
             e.preventDefault();
             const target = document.querySelector(href);
@@ -736,18 +736,15 @@
       }
     })();
 
-    // Resume Download Handler
+    // Resume Download Handler - Optional: Track downloads
     (function() {
       try {
-        const resumeLinks = document.querySelectorAll('#resume-download-link, #resume-download-contact');
+        const resumeLinks = document.querySelectorAll('.btn-resume, .btn-resume-contact');
         resumeLinks.forEach(link => {
-          link.addEventListener('click', function(e) {
-            e.preventDefault();
-            // In a real implementation, this would link to an actual PDF file
-            // For now, we'll show an alert or you can add the actual resume file
-            alert('Resume download functionality - Please add your resume PDF file and update the href attribute.');
-            // Uncomment and update path when resume is ready:
-            // window.open('/resume/Haben_Eyasu_Resume.pdf', '_blank');
+          link.addEventListener('click', function() {
+            // Optional: Add analytics or tracking here
+            // The download will happen automatically via the download attribute
+            console.log('Resume download initiated');
           });
         });
       } catch (error) {
