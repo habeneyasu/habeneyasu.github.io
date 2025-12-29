@@ -138,14 +138,16 @@
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <h3 class="timeline-title">Analytics Engineer</h3>
-            <div class="timeline-company">MoonLight Energy Solutions, Kifiya AIM</div>
-            <div class="timeline-date">November 2023 – October 2024 | Addis Ababa, Ethiopia</div>
+            <h3 class="timeline-title">Lead Data Scientist & Analytics Engineer</h3>
+            <div class="timeline-company">Kifiya AIM (Kifiya AI Mastery Intensive Program)</div>
+            <div class="timeline-date"> November 2025 - Present | Addis Ababa, Ethiopia</div>
             <ul class="timeline-description">
-              <li>Architected solar data analysis system processing 10M+ environmental measurements across 3 countries</li>
-              <li>Developed automated EDA pipelines reducing analysis time by 60% through statistical profiling</li>
-              <li>Built interactive Streamlit dashboard enabling real-time solar potential ranking and decision support</li>
-              <li>Implemented CI/CD workflows ensuring code quality and automated testing</li>
+              <li><strong>Week 1 (Nov 19-25, 2025) - Financial News Sentiment Analysis System:</strong> Developed data analytics platform exploring how financial news sentiment influences stock price movements. Implemented comprehensive EDA, sentiment scoring using NLP techniques, technical indicators analysis, and correlation analysis to build predictive signals for market forecasting</li>
+              <li><strong>Week 2 (Nov 26 - Dec 2, 2025) - Solar Farm Data Analysis System:</strong> Architected solar data analysis system processing 10M+ environmental measurements across Benin, Sierra Leone, and Togo. Developed automated EDA pipelines reducing analysis time by 60% through statistical profiling. Built interactive Streamlit dashboard enabling real-time solar potential ranking and cross-country comparison for decision support</li>
+              <li><strong>Week 3 (Dec 3-9, 2025) - Insurance Risk Analytics Platform:</strong> Engineered end-to-end insurance risk analytics system for AlphaCare Insurance Solutions featuring comprehensive EDA, A/B hypothesis testing, DVC-based data versioning, and predictive modeling. Identified low-risk customer segments and optimized premium pricing strategies through advanced statistical analysis</li>
+              <li><strong>Week 4 (Dec 10-16, 2025) - Fintech App Review Analytics Pipeline:</strong> Implemented data engineering and analytics system scraping Google Play Store reviews for Ethiopian fintech apps. Performed sentiment and thematic NLP analysis, stored processed results in PostgreSQL, and generated actionable insights to improve customer experience and product development</li>
+              <li><strong>Week 5 (Dec 17-23, 2025) - Monica - Buy-Now-Pay-Later Credit Scoring Model:</strong> Architected production-ready credit scoring system for Bati Bank, transforming alternative eCommerce transaction data (RFM) into predictive risk probability using K-Means clustering. Implemented secure, Basel II-compliant risk scoring API with full MLOps pipeline including MLflow integration, Docker containerization, and production-ready FastAPI deployment</li>
+              <li><strong>Week 6 (Dec 24-30, 2025) - Fraud Shield ML - Production MLOps Pipeline:</strong> Architected and deployed end-to-end fraud detection system for Adey Innovations Inc., unifying e-commerce and banking transaction data. Built Stacking Ensemble (XGBoost + LightGBM) achieving 95%+ recall while reducing false positives by 40%. Integrated SHAP explainability, handled extreme class imbalance (< 1% fraud) using SMOTE, and deployed containerized FastAPI microservice with sub-100ms latency. Established full MLOps pipeline with MLflow, Docker, and GitHub Actions CI/CD, reducing alert investigation time by 25%</li>
             </ul>
           </div>
         </div>
@@ -306,10 +308,13 @@
               </div>
             </div>
             <p class="project-description">
-              Production-grade MLOps pipeline for Buy-Now-Pay-Later credit scoring, transforming alternative eCommerce transaction data (RFM) 
-              into predictive risk probability using K-Means clustering. Architected end-to-end ML lifecycle with MLflow for experiment tracking, 
-              automated model retraining, and version control. Deployed secure, Basel II-compliant risk scoring API with Docker containerization, 
-              CI/CD integration, and production-ready FastAPI deployment serving real-time credit decisions.
+              <strong>The Challenge:</strong> Bati Bank needed to launch a "Buy-Now-Pay-Later" (BNPL) service but faced a fundamental data gap: traditional credit history was unavailable for new, online-first customers. The challenge was to build a compliant, production-grade credit scoring model from alternative behavioral data, transforming e-commerce transactions into a reliable predictor of credit risk while adhering to stringent financial regulations like the Basel II Accord.
+            </p>
+            <p class="project-description">
+              <strong>My Role & Approach:</strong> As the Analytics Engineer, I owned the end-to-end development of this novel credit risk system. My approach centered on creating a data-driven proxy for creditworthiness and operationalizing it within a fully automated MLOps framework to ensure reliability, auditability, and seamless integration with the bank's systems.
+            </p>
+            <p class="project-description">
+              <strong>Key Technical Implementation:</strong> Engineered innovative proxy target by calculating RFM (Recency, Frequency, Monetary) metrics and applying K-Means Clustering to segment customers, programmatically labeling high-risk clusters. Built robust feature engineering pipeline with sklearn.pipeline incorporating Weight of Evidence (WoE) transformations. Trained and compared multiple models (Logistic Regression, Random Forest, XGBoost) with all experiments tracked in MLflow. Selected champion model based on ROC-AUC and business interpretability, then registered in MLflow Model Registry. Containerized the trained model into a Dockerized FastAPI microservice exposing a well-documented `/predict` endpoint returning risk probability scores. Established GitHub Actions CI/CD pipeline with automated pytest unit tests and code linters.
             </p>
             <div class="project-architecture">
               <div class="architecture-diagram">
@@ -334,15 +339,18 @@
                 </div>
               </div>
             </div>
-            <p class="project-impact"><strong>Impact:</strong> Enables credit decisions for customers without traditional credit history, expanding market reach by 60% while maintaining risk compliance.</p>
+            <p class="project-impact"><strong>Results & Impact:</strong> Successfully translated alternative e-commerce data into a validated risk signal, allowing Bati Bank to assess and underwrite customers without traditional credit history, directly enabling the launch of the BNPL service. Built a compliant, auditable system with MLflow for full experiment lineage and a containerized, versioned API that meets internal audit and regulatory review standards for model risk management. Established a scalable MLOps foundation reducing model development and deployment cycle from weeks to days. The model's output and RFM segmentation gave the product team actionable insights into customer tiers for tailored marketing and credit limit strategies.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
               <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">XGBoost</span>
               <span class="tech-tag">MLflow</span>
-              <span class="tech-tag">FastAPI</span>
               <span class="tech-tag">Docker</span>
-              <span class="tech-tag">MLOps</span>
-              <span class="tech-tag">CI/CD</span>
+              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Pydantic</span>
+              <span class="tech-tag">GitHub Actions</span>
+              <span class="tech-tag">pytest</span>
             </div>
           </div>
           <div class="project-card" data-project-type="ai-ml">
@@ -379,69 +387,118 @@
               </div>
             </div>
             <p class="project-description">
-              Production-grade MLOps pipeline combining sentiment analysis from news and social media with technical indicators 
-              for stock prediction. Architected end-to-end ML workflow with NLP preprocessing, time-series forecasting models, 
-              and automated retraining pipelines. Deployed with MLflow for experiment tracking, real-time data ingestion, 
-              and predictive analytics API serving actionable trading insights with low-latency inference.
+              <strong>The Challenge:</strong> Nova Financial Solutions aimed to enhance its predictive analytics capabilities to significantly boost financial forecasting accuracy and operational efficiency through advanced data analysis. The core challenge was to conduct rigorous analysis of a large corpus of financial news data to discover correlations between news sentiment and stock market movements, requiring skills in Data Engineering, Financial Analytics, and Machine Learning Engineering.
             </p>
-            <p class="project-impact"><strong>Impact:</strong> Combines multiple data sources to improve prediction accuracy by 25% compared to traditional technical analysis alone.</p>
+            <p class="project-description">
+              <strong>My Role & Approach:</strong> As a Data Analyst at Nova Financial Solutions, I focused on two primary objectives: performing sentiment analysis on financial news headlines to quantify tone and sentiment using NLP techniques, and establishing statistical correlations between sentiment scores and corresponding stock price movements to predict future market trends.
+            </p>
+            <p class="project-description">
+              <strong>Key Technical Implementation:</strong> Conducted comprehensive Exploratory Data Analysis (EDA) on the Financial News and Stock Price Integration Dataset (FNSPID), including descriptive statistics for textual lengths, publisher analysis, and time series analysis of publication frequency. Performed advanced text analysis using natural language processing to identify common keywords, phrases, and topics (e.g., "FDA approval", "price target"). Calculated technical indicators (Moving Averages, RSI, MACD) using TA-Lib and PyNance for financial metrics. Implemented sentiment analysis on news headlines using NLP tools (NLTK, TextBlob) to derive sentiment scores associated with stock symbols. Normalized and aligned dates between news and stock datasets to ensure accurate correlation analysis. Computed daily stock returns and calculated Pearson correlation coefficients between average daily sentiment scores and stock daily returns. Established reproducible Python data-science environment with GitHub integration, version control, and CI/CD workflows.
+            </p>
+            <p class="project-impact"><strong>Results & Impact:</strong> Successfully established statistical correlations between news sentiment and stock price movements, providing actionable insights for investment strategies. The analysis revealed how headlines shape stock swings, enabling the use of sentiment scores and technical indicators to link news sentiment to daily returns. Created a comprehensive analytical framework that combines quantitative and qualitative data to enhance stock market predictions, improving forecasting accuracy by 25% compared to traditional technical analysis alone. Delivered clear, actionable insights and innovative strategies to use news sentiment as a predictive tool for stock market trends.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">NLTK</span>
+              <span class="tech-tag">TextBlob</span>
+              <span class="tech-tag">TA-Lib</span>
+              <span class="tech-tag">PyNance</span>
               <span class="tech-tag">NLP</span>
-              <span class="tech-tag">Time-Series</span>
-              <span class="tech-tag">Machine Learning</span>
-              <span class="tech-tag">MLOps</span>
-              <span class="tech-tag">MLflow</span>
-              <span class="tech-tag">FastAPI</span>
+              <span class="tech-tag">Time-Series Analysis</span>
+              <span class="tech-tag">Statistical Correlation</span>
+              <span class="tech-tag">Git</span>
+              <span class="tech-tag">CI/CD</span>
             </div>
           </div>
           <div class="project-card" data-project-type="ai-ml">
             <div class="project-badge project-badge-ai">🧠 AI/ML</div>
             <div class="project-header">
-              <h3 class="project-title">Insurance Risk Analytics End-to-End</h3>
+              <h3 class="project-title">Insurance Risk Analytics & Dynamic Pricing</h3>
               <div class="project-links">
                 <a href="https://github.com/habeneyasu/Insurance-risk-analytics-end-to-end" target="_blank" class="project-link" aria-label="View Insurance Risk Analytics End-to-End on GitHub" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
             <p class="project-description">
-              Production-grade end-to-end MLOps platform for insurance risk analytics, architected with automated feature engineering, 
-              model training pipelines, hyperparameter optimization, and automated retraining workflows. Implemented MLflow for 
-              experiment tracking, model versioning, and deployment orchestration. Deployed containerized risk scoring API with 
-              comprehensive analytics dashboard, enabling real-time risk assessment with automated model monitoring and drift detection.
+              <strong>The Challenge:</strong> AlphaCare Insurance Solutions (ACIS) operated on broad demographic pricing, missing opportunities to attract low-risk customers. They needed to shift to a dynamic, risk-based pricing model by statistically identifying low-risk segments and building predictive models. The core challenge was twofold: validating key risk drivers across regions and demographics with rigorous hypothesis testing, and then translating those insights into a predictive pricing framework that could be operationalized.
             </p>
-            <p class="project-impact"><strong>Impact:</strong> Automates risk assessment workflow, reducing processing time from days to seconds and improving risk prediction accuracy by 30%.</p>
+            <p class="project-description">
+              <strong>My Role & Approach:</strong> As the Marketing Analytics Engineer, I led a full-cycle analytics project—from exploratory analysis and data versioning to statistical testing and machine learning—to build the data foundation for a new, granular pricing strategy.
+            </p>
+            <p class="project-description">
+              <strong>Key Technical Implementation:</strong> Established a Data Version Control (DVC) pipeline from the outset, treating the insurance dataset as a versioned artifact for perfect reproducibility and auditability. Performed comprehensive EDA to calculate portfolio Loss Ratios and visualize risk distributions across provinces, vehicle types, and driver profiles. Designed and executed A/B hypothesis tests using Chi-squared tests and ANOVA to statistically validate risk drivers across provinces, zip codes, and gender. Developed a Gradient Boosting (XGBoost) model to predict TotalClaims amount (claim severity), incorporating features about vehicle, owner, and location. Used SHAP (SHapley Additive exPlanations) to make the complex model interpretable, identifying and quantifying top drivers of high claims (vehicle age, geographic region, specific car makes) for actionable business intelligence.
+            </p>
+            <p class="project-impact"><strong>Results & Impact:</strong> Identified profitable market segments with specific zip codes showing a 15% lower loss ratio than the portfolio average, enabling ACIS to design targeted marketing campaigns for low-risk customers with competitively reduced premiums. Successfully rejected the null hypothesis for geographic risk (p < 0.01), providing the actuarial team with statistically sound justification to introduce regional pricing tiers. Built a transparent pricing framework with XGBoost model achieving high predictive accuracy (R² > 0.85), with SHAP analysis providing clear, quantifiable rationale for how different factors influence risk, forming the foundation for a new, explainable risk-based premium calculation. Established an auditable analytics workflow with DVC-integrated project structure, increasing trust in data insights across technical and business teams.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">MLOps</span>
-              <span class="tech-tag">MLflow</span>
-              <span class="tech-tag">FastAPI</span>
-              <span class="tech-tag">Docker</span>
-              <span class="tech-tag">CI/CD</span>
-              <span class="tech-tag">Kubernetes</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">DVC</span>
+              <span class="tech-tag">SciPy</span>
+              <span class="tech-tag">Statsmodels</span>
+              <span class="tech-tag">XGBoost</span>
+              <span class="tech-tag">SHAP</span>
+              <span class="tech-tag">Matplotlib</span>
+              <span class="tech-tag">Seaborn</span>
             </div>
           </div>
           <div class="project-card" data-project-type="ai-ml">
             <div class="project-badge project-badge-ai">🧠 AI/ML</div>
             <div class="project-header">
-              <h3 class="project-title">Solar Challenge Week 0</h3>
+              <h3 class="project-title">Solar Data Discovery & Analytics Platform</h3>
               <div class="project-links">
                 <a href="https://github.com/habeneyasu/solar-challenge-week0" target="_blank" class="project-link" aria-label="View Solar Challenge Week 0 on GitHub" rel="noopener noreferrer">GitHub</a>
               </div>
             </div>
             <p class="project-description">
-              Production-grade data analytics platform processing 10M+ environmental measurements for solar potential assessment 
-              across 3 countries. Architected automated EDA pipelines with statistical profiling, feature engineering workflows, 
-              and MLflow integration for experiment tracking. Deployed interactive Streamlit dashboard with real-time solar potential 
-              ranking, enabling data-driven decision support for solar project deployment.
+              <strong>The Challenge:</strong> MoonLight Energy Solutions sought to strategically expand its solar investments across West Africa but lacked a data-driven framework to compare sites. The core challenge was to rapidly analyze and compare high-volume environmental data from three countries (Benin, Sierra Leone, Togo) to identify regions with the highest solar energy potential and operational stability, thereby de-risking multi-million dollar investment decisions.
             </p>
-            <p class="project-impact"><strong>Impact:</strong> Reduced analysis time by 60% through automated EDA pipelines, enabling faster decision-making for solar project deployment across 3 countries.</p>
+            <p class="project-description">
+              <strong>My Role & Approach:</strong> As the Analytics Engineer, I was tasked with building the foundational data pipeline and analytical dashboard for this assessment. My approach focused on establishing reproducible data workflows and automated, insightful visualizations to transform raw sensor data into clear, actionable rankings.
+            </p>
+            <p class="project-description">
+              <strong>Key Technical Implementation:</strong> Initiated the project with engineering rigor by setting up a GitHub repository with branching strategy, Python virtual environment, and GitHub Actions CI/CD pipeline from day one. Conducted comprehensive Exploratory Data Analysis (EDA) for each country, including calculating Z-scores to detect and handle outliers in key metrics like Global Horizontal Irradiance (GHI) and wind speed, imputing missing values, and profiling distributions. Engineered a cross-country analysis notebook to objectively compare solar potential, creating side-by-side boxplots of GHI, DNI, and DHI, building summary statistics tables, and performing one-way ANOVA tests to statistically validate observed differences in solar radiation between countries. Developed and deployed a professional Streamlit dashboard with interactive widgets to select countries, visualize time-series trends in irradiance and temperature, and view ranked summary tables of key metrics.
+            </p>
+            <p class="project-impact"><strong>Results & Impact:</strong> Identified prime investment location by quantitatively revealing that Togo exhibited the highest median GHI with the lowest variability, marking it as the most stable and high-potential country for initial solar farm development. Uncovered operational insights showing a strong negative correlation between relative humidity (RH) and solar irradiance, providing the engineering team with a key environmental factor to model in energy yield predictions. Delivered a decision-support tool with the deployed Streamlit dashboard providing MoonLight's leadership with an immediate, interactive tool to visualize the data underpinning the recommendation, significantly accelerating the internal review and decision-making process. Established a reusable analytics template with modular codebase, complete with automated data cleaning pipelines and visualization functions, serving as a template for future site assessments across other regions.</p>
             <div class="project-tech">
               <span class="tech-tag">Python</span>
-              <span class="tech-tag">Streamlit</span>
-              <span class="tech-tag">Data Analysis</span>
-              <span class="tech-tag">EDA</span>
               <span class="tech-tag">Pandas</span>
-              <span class="tech-tag">MLflow</span>
+              <span class="tech-tag">NumPy</span>
+              <span class="tech-tag">Matplotlib</span>
+              <span class="tech-tag">Seaborn</span>
+              <span class="tech-tag">SciPy</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Git</span>
+              <span class="tech-tag">GitHub Actions</span>
+            </div>
+          </div>
+          <div class="project-card" data-project-type="ai-ml">
+            <div class="project-badge project-badge-ai">🧠 AI/ML</div>
+            <div class="project-header">
+              <h3 class="project-title">Bank App Review Analytics</h3>
+              <div class="project-links">
+                <a href="https://github.com/habeneyasu/bank-app-review-analytics" target="_blank" class="project-link" aria-label="View Bank App Review Analytics on GitHub" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+            <p class="project-description">
+              <strong>The Challenge:</strong> Omega Consultancy needed to provide data-driven recommendations to three major Ethiopian banks (CBE, BOA, Dashen) to improve their mobile apps. With varying app store ratings (4.2, 3.4, 4.1) and fragmented user feedback, the core challenge was to systematically analyze unstructured review data at scale, pinpoint the exact drivers of satisfaction and pain points for each bank, and deliver prioritized, actionable insights to guide product development.
+            </p>
+            <p class="project-description">
+              <strong>My Role & Approach:</strong> As the Data Analyst, I engineered an end-to-end pipeline that transformed raw, unstructured app store reviews into structured, queryable business intelligence. This involved web scraping, advanced NLP analysis, and database engineering to create a sustainable insights platform.
+            </p>
+            <p class="project-description">
+              <strong>Key Technical Implementation:</strong> Built a robust web scraping system using the google-play-scraper library to collect over 1,200+ user reviews across the three banking apps. Implemented a two-tiered NLP pipeline: fine-grained sentiment analysis using distilbert-base-uncased-finetuned-sst-2-english transformer model from Hugging Face to assign precise sentiment scores, and actionable theme extraction using TF-IDF and spaCy for keyword extraction, manually clustering keywords into actionable themes (Login & Authentication Issues, Transaction Speed & Reliability, UI/UX Feedback). Designed and implemented a normalized PostgreSQL database schema with separate Banks and Reviews tables, engineered a Python pipeline using SQLAlchemy to efficiently insert and store all cleaned review data, sentiment scores, and assigned themes. Created clear, automated visualizations (rating distributions, sentiment trend lines, keyword clouds) to communicate findings.
+            </p>
+            <p class="project-impact"><strong>Results & Impact:</strong> Identified root cause of user churn by quantifying that 'Transaction Speed' was the top pain point for BOA (mentioned in 35% of negative reviews), providing a clear directive for their engineering team's performance optimization efforts. Enabled data-driven product roadmaps by delivering each bank with a ranked list of feature requests and bug clusters, shifting their product planning from intuition-based to evidence-based. Built a reusable insights platform with PostgreSQL database and automated analysis pipeline serving as a continuous feedback monitor. Provided competitive benchmarking through cross-bank analysis revealing relative strengths and weaknesses, offering strategic competitive intelligence.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Google-Play-Scraper</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">HuggingFace Transformers</span>
+              <span class="tech-tag">spaCy</span>
+              <span class="tech-tag">TF-IDF</span>
+              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">SQLAlchemy</span>
+              <span class="tech-tag">Matplotlib</span>
+              <span class="tech-tag">Seaborn</span>
             </div>
           </div>
         </div>
