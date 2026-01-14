@@ -55,6 +55,7 @@
           <span class="gradient-text">Haben Eyasu Akelom</span>
         </h1>
         <p class="hero-subtitle">Senior Software & Machine Learning Engineer</p>
+        <p class="hero-value-statement">Architecting scalable fintech platforms and intelligent AI/ML systems</p>
         <div class="hero-stats-bar">
           <div class="hero-stat">
             <span class="hero-stat-number">8+</span>
@@ -125,10 +126,10 @@
       <div class="about-content">
         <div class="about-text">
           <p>
-            I am <strong>Haben Eyasu Akelom</strong>, a <strong>Senior Software & Machine Learning Engineer</strong> with over 8 years of experience building scalable financial platforms and intelligent AI/ML solutions. I combine proven expertise in high-volume Java/Spring Boot microservices with hands-on experience building end-to-end credit scoring, fraud detection, and financial complaint analysis systems using MLOps best practices.
+            I am <strong>Haben Eyasu Akelom</strong>, a <strong>Senior Software & Machine Learning Engineer</strong> with over 8 years of experience building scalable financial platforms and intelligent AI/ML solutions. My journey began in software engineering, where I architected enterprise systems processing millions of transactions for major financial institutions. As I saw the potential of AI to transform financial services, I expanded my expertise to include machine learning, building production-grade systems that enhance financial inclusion and operational efficiency.
           </p>
           <p>
-            I apply predictive modeling, NLP, semantic search, and data analytics to deliver actionable insights and measurable business impact. My work spans from architecting enterprise USSD platforms processing 8M+ monthly transactions for 27+ financial institutions to developing production-grade MLOps pipelines that enhance financial inclusion and operational efficiency.
+            I combine proven expertise in high-volume Java/Spring Boot microservices with hands-on experience building end-to-end credit scoring, fraud detection, and financial complaint analysis systems using MLOps best practices. My passion lies in bridging traditional banking reliability with cutting-edge AI—creating systems that are both trustworthy and transformative. I apply predictive modeling, NLP, semantic search, and data analytics to deliver actionable insights and measurable business impact.
           </p>
           <p>
             My mission is to build secure, scalable digital infrastructure and intelligent AI systems that empower organizations in Ethiopia and beyond, while actively mentoring the next generation of engineers to build a future-ready technology ecosystem.
@@ -182,7 +183,7 @@
             <div class="timeline-company">Kacha Digital Financial Service S.C</div>
             <div class="timeline-date">December 2023 – Present | Addis Ababa, Ethiopia</div>
             <ul class="timeline-description">
-              <li>Architected and led development of a core Credit Scoring API, a production FastAPI microservice automating financial risk assessment. Engineered a hybrid system orchestrating rule-based logic and machine learning models, deployed with containerized APIs for scalability</li>
+              <li><strong>Credit Scoring API:</strong> Led the architecture of a production FastAPI microservice that automates credit risk assessment for a major financial institution. The system orchestrates rule-based logic and machine learning models, deployed via containerized APIs to support real-time decisioning and reduce manual underwriting time. This hybrid approach enables automated risk assessment while maintaining regulatory compliance and operational efficiency.</li>
               <li>Architected enterprise USSD platform serving 27+ financial institutions processing 8M+ transactions monthly with 99.8% uptime</li>
               <li>Led architecture of multi-tenant microservices with OAuth2/JWT supporting 4 languages and thousands of concurrent sessions</li>
               <li>Optimized performance reducing API response times by 60% through Redis caching and connection pooling</li>
@@ -416,6 +417,11 @@
               <p class="project-intro-item"><strong>Who it's for:</strong> Bati Bank and their new "Buy-Now-Pay-Later" (BNPL) service customers, particularly online-first consumers excluded from traditional banking.</p>
               <p class="project-intro-item"><strong>Why it matters:</strong> Expands financial access to underserved populations while maintaining regulatory compliance (Basel II), reducing risk exposure, and enabling new revenue streams for the bank.</p>
             </div>
+            <div class="project-challenge-solution">
+              <p class="project-description"><strong>Challenge:</strong> Bati Bank needed to launch a BNPL service but lacked credit history data for online-first customers. Traditional credit scoring models require extensive credit bureau data, which wasn't available for this new customer segment. The bank needed a compliant, automated risk assessment system that could evaluate creditworthiness using alternative transaction data while meeting Basel II regulatory requirements.</p>
+              <p class="project-description"><strong>Solution:</strong> Led the architecture of a production FastAPI microservice that automates credit risk assessment. Engineered a hybrid system orchestrating rule-based logic and machine learning models, deployed via containerized APIs to support real-time decisioning. The system transforms alternative eCommerce transaction data (RFM metrics) into predictive risk probability using K-Means clustering and XGBoost, with full MLOps pipeline including MLflow integration, Docker containerization, and CI/CD automation.</p>
+              <p class="project-description"><strong>Impact:</strong> Enabled Bati Bank to serve customers previously excluded from credit, expanding market reach by 60% and opening new revenue opportunities. Reduced model development and deployment cycle from weeks to days, establishing a reusable MLOps framework for future risk models. Built a compliant, auditable system meeting Basel II standards, with full experiment lineage providing transparency for regulatory reviews.</p>
+            </div>
             <p class="project-description">
               <strong>My Role:</strong> As the Lead Analytics Engineer, I owned the end-to-end development—from initial research on Basel II compliance requirements to production deployment. I made all architectural decisions, designed the RFM-based proxy target methodology, selected the champion model, and established the complete MLOps framework. I was responsible for ensuring regulatory compliance, model interpretability, and seamless integration with the bank's loan origination system.
             </p>
@@ -471,6 +477,11 @@
               <p class="project-intro-item"><strong>Purpose:</strong> Protect e-commerce and banking transactions from fraud while maintaining customer trust through accurate, explainable real-time detection.</p>
               <p class="project-intro-item"><strong>Who it's for:</strong> Adey Innovations Inc. and their customers, securing millions of transactions across e-commerce and banking platforms.</p>
               <p class="project-intro-item"><strong>Why it matters:</strong> Reduces financial losses from fraud, maintains customer trust by minimizing false positives, and provides regulatory compliance through transparent, auditable AI decisions.</p>
+            </div>
+            <div class="project-challenge-solution">
+              <p class="project-description"><strong>Challenge:</strong> Adey Innovations faced increasing fraud losses across e-commerce and banking platforms, with existing rule-based systems generating too many false positives (blocking legitimate transactions) while missing sophisticated fraud patterns. The system needed to detect fraud in real-time (<100ms) with high accuracy, provide explainable decisions for regulatory compliance, and reduce false positives to maintain customer trust.</p>
+              <p class="project-description"><strong>Solution:</strong> Architected and deployed an end-to-end fraud detection system unifying e-commerce and banking transaction data. Built a Stacking Ensemble (XGBoost + LightGBM) achieving 95%+ recall while reducing false positives by 40%. Integrated SHAP explainability for transparent decision-making, handled extreme class imbalance (<1% fraud) using SMOTE, and deployed containerized FastAPI microservice with sub-100ms latency. Established full MLOps pipeline with MLflow, Docker, and GitHub Actions CI/CD.</p>
+              <p class="project-description"><strong>Impact:</strong> Achieved 95%+ fraud detection recall, protecting millions in transaction value while reducing false positives by 40% to maintain customer trust. Reduced alert investigation time by 25% through SHAP-driven insights, enabling fraud ops team to focus on high-priority cases. Sub-100ms latency enables real-time transaction approval without customer friction, while complete audit trail ensures regulatory compliance.</p>
             </div>
             <p class="project-description">
               <strong>My Role:</strong> As the Lead Data Scientist, I owned the complete system architecture and deployment. I made all technical decisions including model selection (Stacking Ensemble), feature engineering strategies, and MLOps framework design. I was responsible for ensuring the system met both technical performance requirements (95%+ recall, <100ms latency) and business requirements (40% false positive reduction, regulatory compliance).

@@ -188,8 +188,18 @@ body {
 .hero-subtitle {
   font-size: 1.5rem;
   font-weight: 500;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   opacity: 0.95;
+}
+
+.hero-value-statement {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 24px;
+  font-style: italic;
+  text-align: center;
+  line-height: 1.6;
 }
 
 .hero-stats-bar {
@@ -828,6 +838,22 @@ body {
 .project-intro-item strong {
   color: var(--text-primary);
   font-weight: 600;
+}
+
+.project-challenge-solution {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.04), rgba(139, 92, 246, 0.04));
+  padding: 20px 24px;
+  border-radius: 10px;
+  border-left: 4px solid var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.project-challenge-solution .project-description {
+  margin-bottom: 16px;
+}
+
+.project-challenge-solution .project-description:last-child {
+  margin-bottom: 0;
 }
 
 .project-description {
