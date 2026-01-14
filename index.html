@@ -162,8 +162,9 @@
             <h3 class="timeline-title">Lead Data Scientist & Analytics Engineer</h3>
             <div class="timeline-company">Kifiya AIM (Kifiya AI Mastery Intensive Program)</div>
             <div class="timeline-date"> November 2025 - Present | Addis Ababa, Ethiopia</div>
-            <p class="timeline-summary">Delivered 6 production-grade analytics and ML engineering projects spanning financial analytics, renewable energy assessment, insurance risk modeling, NLP-powered product insights, credit scoring, and fraud detection. Architected end-to-end data pipelines with automated EDA, statistical analysis, and MLOps workflows. Built interactive dashboards and deployed containerized APIs, establishing reproducible analytics frameworks and CI/CD pipelines for enterprise-grade solutions.</p>
+            <p class="timeline-summary">Delivered 7 production-grade analytics and ML engineering projects spanning financial analytics, renewable energy assessment, insurance risk modeling, NLP-powered product insights, credit scoring, fraud detection, and RAG-powered autonomous systems. Architected end-to-end data pipelines with automated EDA, statistical analysis, and MLOps workflows. Built interactive dashboards and deployed containerized APIs, establishing reproducible analytics frameworks and CI/CD pipelines for enterprise-grade solutions.</p>
             <ul class="timeline-description">
+              <li><strong>Intelligent Complaint Analysis RAG System (Dec 31, 2025 - Jan 13, 2026):</strong> Architected and deployed production-ready RAG-powered chatbot for CrediTrust Financial, processing 464K+ CFPB complaint records. Built end-to-end pipeline with ChromaDB vector store, semantic search (sentence-transformers/all-MiniLM-L6-v2), and LLM integration enabling natural language querying. Implemented streaming Gradio interface with source citations, reducing complaint analysis time from days to minutes. Demonstrated practical application of autonomous AI systems—enabling self-service analytics for non-technical teams across credit cards, personal loans, savings accounts, and money transfers</li>
               <li><strong>Fraud Shield ML - Production MLOps Pipeline (Dec 24-30, 2025):</strong> Architected and deployed end-to-end fraud detection system for Adey Innovations Inc., unifying e-commerce and banking transaction data. Built Stacking Ensemble (XGBoost + LightGBM) achieving 95%+ recall while reducing false positives by 40%. Integrated SHAP explainability, handled extreme class imbalance (< 1% fraud) using SMOTE, and deployed containerized FastAPI microservice with sub-100ms latency. Established full MLOps pipeline with MLflow, Docker, and GitHub Actions CI/CD, reducing alert investigation time by 25%</li>
               <li><strong>Monica - Buy-Now-Pay-Later Credit Scoring Model (Dec 17-23, 2025):</strong> Architected production-ready credit scoring system for Bati Bank, transforming alternative eCommerce transaction data (RFM) into predictive risk probability using K-Means clustering. Implemented secure, Basel II-compliant risk scoring API with full MLOps pipeline including MLflow integration, Docker containerization, and production-ready FastAPI deployment</li>
               <li><strong>Fintech App Review Analytics Pipeline (Dec 10-16, 2025):</strong> Implemented data engineering and analytics system scraping Google Play Store reviews for Ethiopian fintech apps. Performed sentiment and thematic NLP analysis, stored processed results in PostgreSQL, and generated actionable insights to improve customer experience and product development</li>
@@ -360,6 +361,42 @@
       <div class="projects-subsection">
         <h3 class="projects-subsection-title">AI/ML Projects</h3>
         <div class="projects-grid">
+          <div class="project-card" data-project-type="ai-ml">
+            <div class="project-badge project-badge-ai">🧠 AI/ML</div>
+            <div class="project-header">
+              <h3 class="project-title">Intelligent Complaint Analysis for Financial Services</h3>
+              <div class="project-links">
+                <a href="https://github.com/habeneyasu/financial-complaints-rag-chatbot" target="_blank" class="project-link" aria-label="View Intelligent Complaint Analysis on GitHub" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+            <div class="project-intro">
+              <p class="project-intro-item"><strong>Purpose:</strong> Build a production-ready RAG-powered chatbot that transforms unstructured customer complaint data into actionable insights, enabling autonomous question-answering over financial complaint datasets.</p>
+              <p class="project-intro-item"><strong>Who it's for:</strong> CrediTrust Financial and their internal stakeholders (Product Managers, Customer Support, Compliance & Risk teams) serving 500,000+ users across East African markets.</p>
+              <p class="project-intro-item"><strong>Why it matters:</strong> Demonstrates practical application of Agentic AI principles—autonomous retrieval and generation systems that enable non-technical teams to query complex data without requiring data analysts, reducing complaint analysis time from days to minutes.</p>
+            </div>
+            <p class="project-description">
+              <strong>My Role:</strong> As the Lead Data & AI Engineer, I architected and implemented the complete RAG system from data preprocessing to production deployment. I made all technical decisions including embedding model selection (sentence-transformers/all-MiniLM-L6-v2), vector database choice (ChromaDB), chunking strategy optimization (500 chars with 75 char overlap), and LLM integration approach. I was responsible for building the semantic search pipeline, designing prompt engineering frameworks, creating the interactive Gradio interface, and establishing evaluation metrics for retrieval quality.
+            </p>
+            <p class="project-description">
+              <strong>Key Technical Implementation:</strong> Performed comprehensive EDA on CFPB complaint dataset (464K+ records) analyzing distribution across products (Credit Cards, Personal Loans, Savings Accounts, Money Transfers), narrative length analysis, and data quality assessment. Implemented complete preprocessing pipeline with text normalization, special character removal, and stratified sampling (10K-15K complaints) ensuring proportional representation across product categories. Designed and implemented text chunking using RecursiveCharacterTextSplitter with optimized parameters (chunk_size=500, overlap=75) for balanced context and retrieval accuracy. Generated 384-dimensional embeddings using sentence-transformers/all-MiniLM-L6-v2 and created persistent ChromaDB vector store with rich metadata (complaint_id, product_category, issue, sub_issue, company, state, date_received) for full traceability. Built RAG pipeline with semantic similarity search (top-k=5), designed robust prompt templates instructing LLM to act as financial analyst assistant, and integrated with open-source LLMs via Hugging Face/LangChain. Developed production-ready Gradio interface with streaming responses, source citation display, and multi-product querying capabilities. Established comprehensive evaluation framework with 10 representative questions, quality scoring (1-5), and detailed analysis of retrieval accuracy and answer quality.
+            </p>
+            <p class="project-impact"><strong>Business & Societal Impact:</strong> <strong>Operational Efficiency:</strong> Reduced complaint trend identification time from days to minutes (10x improvement), enabling Product Managers to respond to emerging issues proactively without requiring data analyst support. <strong>Autonomous Intelligence:</strong> Demonstrates practical Agentic AI application—the system autonomously retrieves relevant context and generates grounded answers, enabling self-service analytics for non-technical teams. <strong>Risk Reduction:</strong> Enabled proactive identification of repeated violations and fraud signals, shifting Compliance & Risk teams from reactive to preventive mode. <strong>Trust & Reliability:</strong> Source citation and transparent retrieval process build confidence in AI-generated insights, with full traceability to original complaint narratives enabling verification and auditability.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">RAG</span>
+              <span class="tech-tag">ChromaDB</span>
+              <span class="tech-tag">FAISS</span>
+              <span class="tech-tag">LangChain</span>
+              <span class="tech-tag">Hugging Face</span>
+              <span class="tech-tag">sentence-transformers</span>
+              <span class="tech-tag">LLMs</span>
+              <span class="tech-tag">Gradio</span>
+              <span class="tech-tag">NLP</span>
+              <span class="tech-tag">Vector Databases</span>
+              <span class="tech-tag">Semantic Search</span>
+              <span class="tech-tag">Agentic AI</span>
+            </div>
+          </div>
           <div class="project-card" data-project-type="ai-ml">
             <div class="project-badge project-badge-ai">🧠 AI/ML</div>
             <div class="project-header">
@@ -716,7 +753,7 @@
           <li><strong>Trustworthy AI:</strong> Developing explainable, auditable AI systems that meet regulatory requirements while driving real business value.</li>
           <li><strong>Intelligent Automation:</strong> Creating self-optimizing systems that reduce operational overhead and improve system resilience through AI-driven insights.</li>
           <li><strong>Financial Inclusion:</strong> Building systems that expand access to financial services for underserved populations through alternative data and innovative risk models.</li>
-        </ul>
+  </ul>
         <p class="future-focus-text">
           I'm committed to bridging the gap between traditional banking reliability and cutting-edge AI, creating systems that are both 
           transformative and trustworthy.
