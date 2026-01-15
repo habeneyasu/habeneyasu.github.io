@@ -742,6 +742,12 @@ body {
   overflow: hidden;
   gap: 0;
   height: 100%;
+  min-height: 0;
+}
+
+/* Create a spacer before tech tags to push them to bottom */
+.project-card > *:not(.project-tech) {
+  flex-shrink: 0;
 }
 
 .project-badge {
@@ -892,7 +898,7 @@ body {
 }
 
 .project-architecture {
-  margin: 0 0 16px 0;
+  margin: 0 0 0 0;
   padding: 20px 24px;
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
   border-radius: 12px;
@@ -950,7 +956,7 @@ body {
   color: var(--text-primary);
   font-size: 1rem;
   margin-top: 0;
-  margin-bottom: 16px;
+  margin-bottom: 0;
   padding: 20px 24px;
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.12));
   border-left: 5px solid var(--primary-color);
@@ -958,6 +964,7 @@ body {
   line-height: 1.7;
   box-shadow: 0 3px 12px rgba(99, 102, 241, 0.15);
   font-weight: 500;
+  flex-grow: 1;
 }
 
 /* Spacing when project-impact follows project-architecture */
@@ -968,6 +975,11 @@ body {
 /* Spacing when project-impact follows project-description (Key Technical Implementation -> Business Impact) */
 .project-description:last-of-type + .project-impact {
   margin-top: 8px;
+}
+
+/* If project-architecture is the last element before tech tags, add bottom margin */
+.project-architecture:last-child {
+  margin-bottom: 0;
 }
 
 .project-impact strong {
