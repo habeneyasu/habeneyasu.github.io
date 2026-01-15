@@ -696,7 +696,7 @@ body {
 
 /* Projects Section */
 .projects-subsection {
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 .projects-subsection:last-child {
@@ -707,7 +707,7 @@ body {
   font-size: 1.75rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 28px;
+  margin-bottom: 20px;
   padding-bottom: 12px;
   border-bottom: 2px solid var(--border-color);
   position: relative;
@@ -726,7 +726,7 @@ body {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 28px;
+  gap: 24px;
 }
 
 .project-card {
