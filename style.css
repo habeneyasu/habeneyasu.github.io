@@ -312,7 +312,7 @@ body {
 
 /* Section Styles */
 .section {
-  padding: 96px 0;
+  padding: 48px 0;
 }
 
 .section-alt {
@@ -359,7 +359,7 @@ body {
 .section-title {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
   letter-spacing: -0.5px;
   text-align: center;
   color: var(--text-primary);
@@ -369,12 +369,12 @@ body {
 .about-content {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  gap: 48px;
+  gap: 32px;
   align-items: start;
 }
 
 .about-text p {
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-size: 1.125rem;
   color: var(--text-secondary);
   line-height: 1.85;
@@ -383,7 +383,7 @@ body {
 .about-stats {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 20px;
 }
 
 .stat-item {
@@ -875,14 +875,14 @@ body {
   margin-top: 0;
 }
 
-/* Reduce bottom margin when followed by another project-description */
+/* Reduce bottom margin when followed by another project-description (My Role -> Key Technical Implementation) */
 .project-description:not(:last-of-type) {
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 
 /* Ensure proper spacing before project-architecture or project-impact */
 .project-description:last-of-type {
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 }
 
 /* Spacing when project-description is followed by project-architecture */
@@ -961,12 +961,12 @@ body {
 
 /* Spacing when project-impact follows project-architecture */
 .project-architecture + .project-impact {
-  margin-top: 16px;
+  margin-top: 12px;
 }
 
-/* Spacing when project-impact follows project-description */
+/* Spacing when project-impact follows project-description (Key Technical Implementation -> Business Impact) */
 .project-description:last-of-type + .project-impact {
-  margin-top: 16px;
+  margin-top: 8px;
 }
 
 .project-impact strong {
@@ -1020,12 +1020,12 @@ body {
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 32px;
+  gap: 20px;
 }
 
 .education-card {
   background: white;
-  padding: 32px;
+  padding: 20px 24px;
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -1353,7 +1353,7 @@ body {
 
   .section-title {
     font-size: 2rem;
-    margin-bottom: 40px;
+    margin-bottom: 28px;
   }
 
   .about-content {
@@ -1368,7 +1368,7 @@ body {
   }
 
   .section {
-    padding: 72px 0;
+    padding: 40px 0;
   }
 
   .timeline::before {
@@ -1431,11 +1431,11 @@ body {
   }
 
   .section {
-    padding: 64px 0;
+    padding: 32px 0;
   }
 
   .section-title {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
     font-size: 1.75rem;
   }
 
