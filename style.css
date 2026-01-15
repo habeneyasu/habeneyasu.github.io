@@ -728,6 +728,13 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 24px;
   align-items: stretch;
+  grid-auto-rows: minmax(min-content, max-content);
+}
+
+/* Force cards in the same row to have equal height */
+.projects-grid > .project-card {
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card {
@@ -745,9 +752,10 @@ body {
   min-height: 0;
 }
 
-/* Create a spacer before tech tags to push them to bottom */
-.project-card > *:not(.project-tech) {
-  flex-shrink: 0;
+/* Allow content elements to shrink if needed */
+.project-card > *:not(.project-tech):not(.project-impact) {
+  flex-shrink: 1;
+  flex-grow: 0;
 }
 
 .project-badge {
