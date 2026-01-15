@@ -66,7 +66,7 @@ body {
 .nav-brand {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--primary-dark);
 }
 
 .nav-toggle {
@@ -116,7 +116,7 @@ body {
 }
 
 .nav-menu a:hover {
-  color: var(--primary-color);
+  color: var(--primary-dark);
 }
 
 .nav-menu a::after {
@@ -135,7 +135,7 @@ body {
 }
 
 .nav-menu a.nav-active {
-  color: var(--primary-color);
+  color: var(--primary-dark);
   font-weight: 600;
 }
 
@@ -271,7 +271,7 @@ body {
 
 .btn-primary {
   background-color: white;
-  color: var(--primary-color);
+  color: var(--primary-dark);
 }
 
 .btn-primary:hover {
@@ -287,7 +287,7 @@ body {
 
 .btn-secondary:hover {
   background-color: white;
-  color: var(--primary-color);
+  color: var(--primary-dark);
 }
 
 .hero-social {
@@ -471,7 +471,7 @@ body {
 
 .timeline-company {
   font-size: 1.125rem;
-  color: var(--primary-color);
+  color: var(--primary-dark);
   font-weight: 500;
   margin-bottom: 4px;
 }
@@ -551,7 +551,7 @@ body {
 }
 
 .skills-note strong {
-  color: var(--primary-color);
+  color: var(--primary-dark);
 }
 
 .skills-grid {
@@ -570,7 +570,7 @@ body {
 }
 
 .skill-core .skill-category-title {
-  color: var(--primary-color);
+  color: var(--primary-dark);
 }
 
 .skill-tag-core {
@@ -820,7 +820,7 @@ body {
 }
 
 .project-link {
-  color: var(--primary-color);
+  color: var(--primary-dark);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.9rem;
@@ -995,7 +995,7 @@ body {
 }
 
 .project-impact strong {
-  color: var(--primary-color);
+  color: var(--primary-dark);
   font-weight: 700;
   font-size: 1.05rem;
   display: block;
@@ -1071,7 +1071,7 @@ body {
 
 .education-institution {
   font-size: 1rem;
-  color: var(--primary-color);
+  color: var(--primary-dark);
   font-weight: 500;
   margin-bottom: 4px;
 }
@@ -1156,7 +1156,7 @@ body {
 }
 
 .contact-cta strong {
-  color: var(--primary-color);
+  color: var(--primary-dark);
   font-weight: 600;
 }
 
