@@ -725,16 +725,14 @@ body {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 24px;
   align-items: stretch;
-  grid-auto-rows: minmax(min-content, max-content);
 }
 
-/* Force cards in the same row to have equal height */
-.projects-grid > .project-card {
-  display: flex;
-  flex-direction: column;
+/* Ensure all grid items stretch to fill row height */
+.projects-grid > * {
+  height: 100%;
 }
 
 .project-card {
@@ -756,6 +754,11 @@ body {
 .project-card > *:not(.project-tech):not(.project-impact) {
   flex-shrink: 1;
   flex-grow: 0;
+}
+
+/* Ensure project-impact always grows to fill available space */
+.project-impact {
+  flex-grow: 1 !important;
 }
 
 .project-badge {
@@ -973,6 +976,8 @@ body {
   box-shadow: 0 3px 12px rgba(99, 102, 241, 0.15);
   font-weight: 500;
   flex-grow: 1;
+  flex-shrink: 1;
+  min-height: 0;
 }
 
 /* Spacing when project-impact follows project-architecture */
@@ -1006,6 +1011,7 @@ body {
   padding-top: 12px;
   margin-top: auto;
   border-top: 1px solid var(--border-color);
+  flex-shrink: 0;
 }
 
 .tech-tag {
