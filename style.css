@@ -821,7 +821,7 @@ body {
   padding: 20px 24px;
   border-radius: 10px;
   border-left: 4px solid var(--primary-color);
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .project-intro-item {
@@ -845,11 +845,11 @@ body {
   padding: 20px 24px;
   border-radius: 10px;
   border-left: 4px solid var(--secondary-color);
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .project-challenge-solution .project-description {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .project-challenge-solution .project-description:last-child {
@@ -858,18 +858,40 @@ body {
 
 .project-description {
   color: var(--text-secondary);
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   line-height: 1.75;
   flex-grow: 1;
   font-size: 0.95rem;
 }
 
+/* Tighter spacing between consecutive project-description paragraphs (My Role -> Key Technical Implementation) */
+.project-description + .project-description {
+  margin-top: 0;
+}
+
+/* Spacing when project-description follows project-challenge-solution or project-intro */
+.project-challenge-solution + .project-description,
+.project-intro + .project-description {
+  margin-top: 0;
+}
+
+/* Reduce bottom margin when followed by another project-description */
+.project-description:not(:last-of-type) {
+  margin-bottom: 8px;
+}
+
+/* Ensure proper spacing before project-architecture or project-impact */
 .project-description:last-of-type {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+/* Spacing when project-description is followed by project-architecture */
+.project-description:last-of-type + .project-architecture {
+  margin-top: 0;
 }
 
 .project-architecture {
-  margin: 16px 0 20px 0;
+  margin: 0 0 16px 0;
   padding: 20px 24px;
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.08), rgba(139, 92, 246, 0.08));
   border-radius: 12px;
@@ -926,8 +948,8 @@ body {
 .project-impact {
   color: var(--text-primary);
   font-size: 1rem;
-  margin-top: 24px;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 16px;
   padding: 20px 24px;
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(139, 92, 246, 0.12));
   border-left: 5px solid var(--primary-color);
@@ -935,6 +957,16 @@ body {
   line-height: 1.7;
   box-shadow: 0 3px 12px rgba(99, 102, 241, 0.15);
   font-weight: 500;
+}
+
+/* Spacing when project-impact follows project-architecture */
+.project-architecture + .project-impact {
+  margin-top: 16px;
+}
+
+/* Spacing when project-impact follows project-description */
+.project-description:last-of-type + .project-impact {
+  margin-top: 16px;
 }
 
 .project-impact strong {
@@ -950,7 +982,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding-top: 16px;
+  padding-top: 12px;
+  margin-top: 0;
   border-top: 1px solid var(--border-color);
 }
 
