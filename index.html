@@ -618,6 +618,46 @@
               <span class="tech-tag">Seaborn</span>
             </div>
           </div>
+          <div class="project-card" data-project-type="ai-ml">
+            <div class="project-badge project-badge-ai">🧠 AI/ML</div>
+            <div class="project-header">
+              <h3 class="project-title">Forecasting Financial Inclusion in Ethiopia</h3>
+              <div class="project-links">
+                <a href="https://github.com/habeneyasu/ethiopia-financial-inclusion-forecast" target="_blank" class="project-link" aria-label="View Forecasting Financial Inclusion in Ethiopia on GitHub" rel="noopener noreferrer">GitHub</a>
+              </div>
+            </div>
+            <div class="project-intro">
+              <p class="project-intro-item"><strong>Purpose:</strong> Forecast Ethiopia's financial inclusion progress using time series analysis and event impact modeling to provide evidence-based policy insights and strategic planning support for financial inclusion initiatives.</p>
+              <p class="project-intro-item"><strong>Who it's for:</strong> Policy makers, financial institutions, development partners, and stakeholders seeking data-driven forecasts and actionable insights to guide financial inclusion strategies and measure progress toward national targets.</p>
+              <p class="project-intro-item"><strong>Why it matters:</strong> Enables evidence-based decision-making by quantifying the impact of policies and product launches on financial inclusion metrics, providing reliable forecasts with confidence intervals, and supporting progress tracking toward national inclusion targets (e.g., 60% by 2030).</p>
+            </div>
+            <div class="project-challenge-solution">
+              <p class="project-description"><strong>Challenge:</strong> Ethiopia's financial inclusion landscape is complex, with multiple indicators (account ownership, digital payment usage) influenced by various policy events, product launches, and infrastructure investments. Stakeholders needed a systematic way to understand historical trends, quantify event impacts, and generate reliable forecasts to guide strategic planning and measure progress toward national inclusion targets.</p>
+              <p class="project-description"><strong>Solution:</strong> Built a comprehensive forecasting platform combining time series analysis with event impact modeling. Developed an end-to-end analytical pipeline from data exploration through forecasting, with an interactive Streamlit dashboard enabling stakeholders to explore trends, understand event impacts, and view forecasts with confidence intervals. The system analyzes 43 records across 29 indicators, catalogs 10 major events, and quantifies 14 impact links between events and inclusion metrics.</p>
+              <p class="project-description"><strong>Impact:</strong> Transformed complex financial inclusion data into actionable policy insights through interactive visualizations and scenario analysis. Enabled stakeholders to explore data independently, understand which events drive inclusion outcomes, and make informed decisions based on evidence-based forecasts. Reduced analysis time from weeks to minutes through automated pipelines and self-service dashboard capabilities.</p>
+            </div>
+            <p class="project-description">
+              <strong>My Role:</strong> As the Lead Data Scientist & Analytics Engineer, I architected and developed the complete forecasting system from data exploration to dashboard deployment. I made all methodological decisions including time series model selection, event impact quantification approaches, and dashboard design. I was responsible for building the end-to-end analytical pipeline, establishing reproducible workflows, and delivering an interactive dashboard that enables non-technical stakeholders to explore data and generate insights independently.
+            </p>
+            <p class="project-description">
+              <strong>Key Technical Implementation:</strong> Established comprehensive data exploration pipeline analyzing Global Findex Database (2011-2024) with 43 records across 29 indicators covering account ownership and digital payment usage. Performed extensive exploratory data analysis (EDA) identifying trends, patterns, and anomalies in financial inclusion metrics. Cataloged and modeled 10 major events (policy changes, product launches, infrastructure investments) and quantified their impact on inclusion indicators through event-indicator association matrices. Built time series forecasting models generating reliable forecasts for 2025-2027 with confidence intervals, incorporating both trend analysis and event effects. Developed interactive Streamlit dashboard with 4 comprehensive pages: Overview (key metrics and growth highlights), Trends (interactive time series analysis with date range selectors), Forecasts (2025-2027 projections with scenario visualization), and Inclusion Projections (progress tracking toward 60% target with scenario comparison). Implemented automated quality checks, data enrichment capabilities, and reproducible analysis notebooks. Established GitHub Actions CI/CD pipeline ensuring code quality and automated testing.
+            </p>
+            <p class="project-impact"><strong>Business & Societal Impact:</strong> <strong>Policy Intelligence:</strong> Transformed complex data into clear forecasts and scenario visualizations enabling evidence-based policy decisions and strategic planning for financial inclusion initiatives. <strong>Operational Efficiency:</strong> Reduced analysis time from weeks to minutes through automated pipelines and self-service dashboard, enabling stakeholders to answer questions independently without requiring data analyst support. <strong>Financial Inclusion:</strong> Provides actionable insights to guide initiatives that expand access to financial services, particularly important for underserved populations in Ethiopia. <strong>Trust & Reliability:</strong> Quantified event impacts with validated association matrices and reliable forecasts with confidence intervals build confidence in data-driven policy recommendations, enabling transparent decision-making and progress tracking toward national inclusion targets.</p>
+            <div class="project-tech">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Pandas</span>
+              <span class="tech-tag">NumPy</span>
+              <span class="tech-tag">Scikit-learn</span>
+              <span class="tech-tag">SciPy</span>
+              <span class="tech-tag">Streamlit</span>
+              <span class="tech-tag">Plotly</span>
+              <span class="tech-tag">Time Series Analysis</span>
+              <span class="tech-tag">Event Impact Modeling</span>
+              <span class="tech-tag">Statistical Forecasting</span>
+              <span class="tech-tag">Interactive Dashboards</span>
+              <span class="tech-tag">GitHub Actions</span>
+            </div>
+          </div>
         </div>
     </div>
   </section>
@@ -833,7 +873,7 @@
     <div class="container">
       <div class="footer-content">
         <div class="footer-text">
-          <p>&copy; 2025 Haben Eyasu Akelom. All rights reserved.</p>
+          <p>&copy; <span id="copyright-year">2025</span> Haben Eyasu Akelom. All rights reserved.</p>
           <p class="footer-note">Built with passion for software engineering and AI innovation</p>
         </div>
         <div class="footer-social">
@@ -1025,6 +1065,18 @@
         });
       } catch (error) {
         console.error('Error initializing resume download:', error);
+      }
+    })();
+
+    // Update copyright year dynamically
+    (function() {
+      try {
+        const copyrightYear = document.getElementById('copyright-year');
+        if (copyrightYear) {
+          copyrightYear.textContent = new Date().getFullYear();
+        }
+      } catch (error) {
+        console.error('Error updating copyright year:', error);
       }
     })();
   </script>
