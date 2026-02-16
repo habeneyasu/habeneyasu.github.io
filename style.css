@@ -555,9 +555,9 @@ body {
 }
 
 .skills-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 40px;
+  display: flex !important;
+  flex-wrap: wrap;
+  gap: 12px;
   visibility: visible !important;
   opacity: 1 !important;
   max-width: 1200px;
@@ -592,10 +592,12 @@ body {
   border-radius: 12px;
   box-shadow: var(--shadow-md);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  display: block !important;
+  display: flex !important;
+  flex-direction: column;
   visibility: visible !important;
   opacity: 1 !important;
   min-height: 200px;
+  flex: 1 1 320px;
 }
 
 .skill-category:hover {
@@ -633,16 +635,17 @@ body {
 }
 
 .skill-tag {
-  padding: 8px 16px;
+  padding: 6px 16px;
   background: var(--bg-tertiary);
   color: var(--text-primary);
-  border-radius: 6px;
+  border-radius: 20px;
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
   display: inline-block;
   visibility: visible !important;
   opacity: 1 !important;
+  white-space: nowrap;
 }
 
 .skill-tag:hover {
@@ -723,9 +726,9 @@ body {
 }
 
 .projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
   align-items: stretch;
 }
 
@@ -745,7 +748,7 @@ body {
   position: relative;
   overflow: hidden;
   gap: 0;
-  height: 100%;
+  flex: 1 1 320px;
   min-height: 0;
 }
 
@@ -1006,7 +1009,7 @@ body {
 .project-tech {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 12px;
   padding-top: 12px;
   margin-top: auto;
   border-top: 1px solid var(--border-color);
@@ -1014,14 +1017,15 @@ body {
 }
 
 .tech-tag {
-  padding: 6px 12px;
+  padding: 6px 16px;
   background: var(--bg-tertiary);
   color: var(--text-primary);
-  border-radius: 6px;
+  border-radius: 20px;
   font-size: 0.85rem;
   font-weight: 500;
   display: inline-block;
   position: relative;
+  white-space: nowrap;
 }
 
 .tech-tag:not(:last-child)::after {
@@ -1411,7 +1415,10 @@ body {
   }
 
   .skills-grid,
-  .projects-grid,
+  .projects-grid {
+    flex-direction: column;
+  }
+
   .education-grid {
     grid-template-columns: 1fr;
   }
