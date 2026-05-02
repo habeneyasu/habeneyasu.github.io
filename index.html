@@ -6,13 +6,13 @@
   <meta name="description" content="Haben Eyasu Akelom - Senior Software & AI Engineer focused on Agentic AI, RAG Systems, and Production MLOps. I build scalable backend platforms and production-grade AI agents that drive business outcomes.">
   <meta name="keywords" content="Senior AI Engineer, MLOps Specialist, Agentic AI, RAG Systems, AI Architecture, LangChain, ChromaDB, FastAPI, Docker, Ubuntu, Production ML">
   <meta name="author" content="Haben Eyasu Akelom">
-  <meta property="og:title" content="Haben Eyasu Akelom | Senior Software & AI Engineer | Agentic AI · RAG Systems · Production MLOps">
-  <meta property="og:description" content="I build scalable backend platforms and production-grade AI agents that drive business outcomes.">
+  <meta property="og:title" content="Haben Eyasu Akelom | Senior AI & Software Engineer">
+  <meta property="og:description" content="Building production-grade AI systems and scalable fintech infrastructure. Agentic AI, RAG, MLOps.">
+  <meta property="og:image" content="https://habeneyasu.github.io/og-image.png">
+  <!-- Add og-image.png (1200x630px) to the repo root -->
+  <meta property="og:url" content="https://habeneyasu.github.io/">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://habeneyasu.github.io">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Haben Eyasu Akelom | Senior Software & AI Engineer | Agentic AI · RAG Systems · Production MLOps">
-  <meta name="twitter:description" content="I build scalable backend platforms and production-grade AI agents that drive business outcomes.">
   <title>Haben Eyasu Akelom | Senior Software & AI Engineer | Agentic AI · RAG Systems · Production MLOps</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
   <link rel="stylesheet" href="style.css">
@@ -23,7 +23,9 @@
   </style>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: true, theme: 'neutral' });</script>
 </head>
 <body>
   <!-- Navigation -->
@@ -90,7 +92,6 @@
         </div>
         <div class="hero-social">
           <a href="mailto:habeneyasu@gmail.com" class="social-link">Email</a>
-          <a href="tel:+251942707424" class="social-link">Phone</a>
           <a href="https://linkedin.com/in/habeneyasu" target="_blank" class="social-link">LinkedIn</a>
           <a href="https://github.com/habeneyasu" target="_blank" class="social-link">GitHub</a>
         </div>
@@ -134,25 +135,6 @@
       <h2 id="about-heading" class="section-title">About Me</h2>
       <div class="about-content about-content-single">
         <div class="about-text">
-          <div class="stats-bar">
-            <div class="stats-bar-item">
-              <div class="stats-bar-value">8+ Years</div>
-              <div class="stats-bar-label">Experience</div>
-        </div>
-            <div class="stats-bar-item">
-              <div class="stats-bar-value">8M+ Monthly</div>
-              <div class="stats-bar-label">Throughput</div>
-          </div>
-            <div class="stats-bar-item">
-              <div class="stats-bar-value">35+ Banks</div>
-              <div class="stats-bar-label">Integration</div>
-          </div>
-            <div class="stats-bar-item">
-              <div class="stats-bar-value">99.8%</div>
-              <div class="stats-bar-label">Reliability</div>
-          </div>
-        </div>
-
           <p class="about-lead">
             I am a <strong>Senior Software & AI Systems Architect</strong> with 8+ years engineering high-stakes distributed systems. I bridge <strong>robust backend infrastructure</strong> and <strong>frontier AI</strong> to drive measurable business ROI.
           </p>
@@ -266,7 +248,7 @@
         <p class="skills-note">Grouped by <strong>Domain Expertise</strong> — Senior-level organization</p>
       </div>
       <div class="skills-grid">
-        <div class="skill-category skill-core">
+        <div class="skill-category skill-core" data-skill-group>
           <h3 class="skill-category-title">🏗️ The Core Engine</h3>
           <p class="skill-category-description">High-scale infrastructure & backend systems</p>
           <div class="skill-tags">
@@ -293,7 +275,7 @@
             <span class="skill-tag">API Gateway</span>
           </div>
         </div>
-        <div class="skill-category skill-core">
+        <div class="skill-category skill-core" data-skill-group>
           <h3 class="skill-category-title">🧠 The Intelligence Layer</h3>
           <p class="skill-category-description">AI/MLOps & production-grade ML systems</p>
           <div class="skill-tags">
@@ -327,7 +309,7 @@
             <span class="skill-tag">Semantic Search</span>
           </div>
         </div>
-        <div class="skill-category skill-core">
+        <div class="skill-category skill-core" data-skill-group>
           <h3 class="skill-category-title">⚙️ The Infrastructure</h3>
           <p class="skill-category-description">DevOps, cloud & deployment orchestration</p>
           <div class="skill-tags">
@@ -711,14 +693,14 @@
       <div class="project-card architecture-card architecture-card-first">
         <h3 class="project-title architecture-title">End-to-End AI Pipeline (Reference Architecture)</h3>
         <div class="mermaid-card">
-          <pre class="mermaid">
+          <div class="mermaid">
 flowchart LR
   A[Data Ingestion] --> B[Preprocessing & Chunking]
   B --> C[Embeddings & Feature Store]
   C --> D[Inference / RAG Retrieval]
   D --> E[Evaluation Loop]
   E --> F[Monitoring & Feedback]
-          </pre>
+          </div>
         </div>
         <p class="project-description architecture-description">
           <strong>Pattern:</strong> Production-first AI lifecycle with explicit retrieval, evaluation, and monitoring stages to improve reliability and reduce drift.
@@ -859,15 +841,15 @@ flowchart LR
   <!-- GitHub Section -->
   <section id="github" class="section">
     <div class="container">
-      <h2 class="section-title">GitHub Repositories</h2>
-      <p class="section-subtitle">Quick access to core repositories and production implementations</p>
-      <div class="repo-links-grid">
-        <a href="https://github.com/habeneyasu/company-rag-expert" target="_blank" rel="noopener noreferrer" class="repo-link-card">Company RAG Expert</a>
-        <a href="https://github.com/habeneyasu/realtime-call-center-ai" target="_blank" rel="noopener noreferrer" class="repo-link-card">Real-Time Call Center AI</a>
-        <a href="https://github.com/habeneyasu/financial-complaints-rag-chatbot" target="_blank" rel="noopener noreferrer" class="repo-link-card">Financial Complaints RAG</a>
-        <a href="https://github.com/habeneyasu/bati-bank-credit-scoring-mlops" target="_blank" rel="noopener noreferrer" class="repo-link-card">Credit Scoring MLOps</a>
-        <a href="https://github.com/habeneyasu/chimera-factory" target="_blank" rel="noopener noreferrer" class="repo-link-card">Project Chimera</a>
-        <a href="https://github.com/habeneyasu/enterprise-maas-platform" target="_blank" rel="noopener noreferrer" class="repo-link-card">Enterprise MaaS Platform</a>
+      <h2 class="section-title">GitHub Activity</h2>
+      <p class="section-subtitle">Open source contributions and development activity</p>
+      <div class="github-graph-wrap">
+        <img
+          src="https://ghchart.rshah.org/habeneyasu"
+          alt="Haben's GitHub Contribution Graph"
+          style="width:100%; border-radius:8px;"
+        />
+        <p class="github-graph-caption">GitHub activity — last 12 months</p>
       </div>
       <div class="center-cta">
         <a href="https://github.com/habeneyasu" target="_blank" class="btn btn-primary">View All Repositories</a>
@@ -882,17 +864,17 @@ flowchart LR
       <p class="section-subtitle">Architecture thinking, implementation lessons, and production AI engineering practices</p>
       <div class="insights-grid">
         <article class="insight-card">
-          <h3 class="insight-title">Designing Enterprise RAG with Governance</h3>
+          <h3 class="insight-title">Designing Enterprise RAG with Governance <span class="coming-soon-badge">Coming Soon</span></h3>
           <p class="insight-meta">Architecture · 8 min read</p>
           <p class="insight-text">How to build grounded RAG systems using metadata-aware retrieval, reranking, and source-backed responses while reducing hallucinations in executive-facing workflows.</p>
         </article>
         <article class="insight-card">
-          <h3 class="insight-title">Building Real-Time AI Pipelines with Redis Streams</h3>
+          <h3 class="insight-title">Building Real-Time AI Pipelines with Redis Streams <span class="coming-soon-badge">Coming Soon</span></h3>
           <p class="insight-meta">AI Engineering · 7 min read</p>
           <p class="insight-text">A practical pattern for live transcription and analysis: stream processing, back-pressure control, WebSocket delivery, and multi-LLM orchestration at low latency.</p>
         </article>
         <article class="insight-card">
-          <h3 class="insight-title">MLOps in Financial Systems: From Model to Production</h3>
+          <h3 class="insight-title">MLOps in Financial Systems: From Model to Production <span class="coming-soon-badge">Coming Soon</span></h3>
           <p class="insight-meta">MLOps · 6 min read</p>
           <p class="insight-text">A production blueprint for credit scoring and fraud detection: experiment tracking, model registry, explainability, compliance, and automated deployment.</p>
         </article>
@@ -935,13 +917,13 @@ flowchart LR
               <div class="contact-value">github.com/habeneyasu</div>
             </div>
           </a>
-          <a href="tel:+251942707424" class="contact-method" aria-label="Call +251 942 707 424">
-            <div class="contact-icon">📱</div>
+          <div class="contact-method contact-method-text">
+            <div class="contact-icon">📬</div>
             <div class="contact-info">
-              <div class="contact-label">Phone</div>
-              <div class="contact-value">+251 942 707 424</div>
+              <div class="contact-label">Availability</div>
+              <div class="contact-value">Available via Email or LinkedIn</div>
             </div>
-          </a>
+          </div>
         </div>
         <div class="contact-resume">
           <a href="Haben_Eyasu_Akelom_Resume.pdf" class="btn btn-resume-contact" id="resume-download-contact" aria-label="Download resume PDF" download="Haben_Eyasu_Akelom_Resume.pdf">
@@ -958,8 +940,8 @@ flowchart LR
     <div class="container">
       <div class="footer-content">
         <div class="footer-text">
-          <p>&copy; <span id="copyright-year">2025</span> Haben Eyasu Akelom. All rights reserved.</p>
-          <p class="footer-note">Built with passion for software engineering and AI innovation</p>
+          <p>&copy; <span id="copyright-year">2026</span> Haben Eyasu Akelom. All rights reserved.</p>
+          <p class="footer-note">Haben Eyasu Akelom · Addis Ababa, Ethiopia · 2026</p>
         </div>
         <div class="footer-social">
           <a href="https://linkedin.com/in/habeneyasu" target="_blank" class="footer-social-link" aria-label="Visit LinkedIn profile" rel="noopener noreferrer">
@@ -979,10 +961,6 @@ flowchart LR
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js"></script>
-  <script>
-    mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-  </script>
   <script>
     // Mobile Navigation Toggle
     (function() {
@@ -1155,6 +1133,34 @@ flowchart LR
       } catch (error) {
         console.error('Error initializing resume download:', error);
       }
+    })();
+
+    // Skills trim: hide items beyond 15, add toggle + GitHub link
+    (function() {
+      const LIMIT = 15;
+      const groups = document.querySelectorAll('[data-skill-group]');
+      groups.forEach(function(group) {
+        const tags = group.querySelectorAll('.skill-tags .skill-tag');
+        if (tags.length <= LIMIT) return;
+        const excess = tags.length - LIMIT;
+        for (let i = LIMIT; i < tags.length; i++) {
+          tags[i].classList.add('skill-tag-hidden');
+        }
+        const btn = document.createElement('button');
+        btn.className = 'skill-more-btn';
+        btn.textContent = '+' + excess + ' more';
+        btn.setAttribute('aria-expanded', 'false');
+        let expanded = false;
+        btn.addEventListener('click', function() {
+          expanded = !expanded;
+          for (let i = LIMIT; i < tags.length; i++) {
+            tags[i].classList.toggle('skill-tag-hidden', !expanded);
+          }
+          btn.textContent = expanded ? 'Show less' : '+' + excess + ' more';
+          btn.setAttribute('aria-expanded', String(expanded));
+        });
+        group.querySelector('.skill-tags').appendChild(btn);
+      });
     })();
 
     // Update copyright year dynamically
