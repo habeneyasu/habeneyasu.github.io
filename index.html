@@ -407,19 +407,18 @@
         <div class="mermaid-card">
           <div class="mermaid">
 flowchart TD
-  User([User / Claude Desktop]) -->|NL Query via MCP| Coordinator
-  Coordinator[Coordinator Agent] -->|Route by intent| IA[Insights Agent]
-  Coordinator -->|Route by intent| EA[Expense Agent]
-  Coordinator -->|Route by intent| SA[Savings Agent]
-  Coordinator -->|Route by intent| MA[Metrics Agent]
-  IA -->|SQL + LLM-as-Judge| Validator{4-Layer Validator}
-  EA -->|AI Categorization| Validator
-  SA -->|Goal Progress| Validator
-  MA -->|Real-time Metrics| Validator
-  Validator -->|Pass: grounding coverage relevance consistency| Response([Verified Response])
-  Validator -->|Fail: bounded retry| Fallback([Deterministic Fallback])
-  Coordinator --- DB[(Aurora Serverless PostgreSQL)]
-  Coordinator --- Auth[AWS Cognito / JWT]
+  U([User via MCP]) --> C[Coordinator]
+  C --> IA[Insights Agent]
+  C --> EA[Expense Agent]
+  C --> SA[Savings Agent]
+  C --> MA[Metrics Agent]
+  IA --> V{4-Layer Validator}
+  EA --> V
+  SA --> V
+  MA --> V
+  V -->|Pass| R([Verified Response])
+  V -->|Fail| F([SQL Fallback])
+  C --- DB[(Aurora PostgreSQL)]
           </div>
         </div>
         <p class="project-description architecture-description"><strong>Pattern:</strong> Coordinator decomposes intent and routes to specialized worker agents. Every LLM output passes a 4-layer validation engine (grounding ±1.5%, coverage, relevance, consistency) before release. Failed validation triggers bounded retry then deterministic SQL fallback — eliminating blind LLM output in financial contexts.</p>
@@ -430,12 +429,11 @@ flowchart TD
           <div class="mermaid-card">
             <div class="mermaid">
 flowchart LR
-  A[Document Ingestion] --> B[Chunking & Processing]
-  B --> C[Embedding Generation]
-  C --> D[(Vector Store ChromaDB)]
-  D --> E[Semantic Search]
-  E --> F[LLM OpenRouter]
-  F --> G[Response + Citations]
+  A[Ingest Docs] --> B[Chunk + Embed]
+  B --> C[(ChromaDB)]
+  C --> D[Semantic Search]
+  D --> E[LLM OpenRouter]
+  E --> F[Response + Citations]
             </div>
           </div>
           <p class="project-description architecture-description">Privacy-first architecture (documents remain local) · Modular ingestion pipeline · Metadata-aware retrieval · Multi-model LLM orchestration</p>
@@ -445,15 +443,15 @@ flowchart LR
           <div class="mermaid-card">
             <div class="mermaid">
 flowchart LR
-  A[Audio Capture 200ms] --> B[FastAPI Gateway]
+  A[Audio 200ms] --> B[FastAPI]
   B --> C[(Redis Streams)]
-  C --> D[Faster-Whisper ASR]
-  C --> E[Speaker Diarization]
+  C --> D[Whisper ASR]
+  C --> E[Diarization]
   D --> F[LLM Analysis]
   E --> F
   F --> G[(PostgreSQL)]
-  F --> H[WebSocket Push]
-  H --> I[React Frontend]
+  F --> H[WebSocket]
+  H --> I[React UI]
             </div>
           </div>
           <p class="project-description architecture-description">Distributed architecture for horizontal scaling · WebSocket for real-time communication · Multi-LLM orchestration · Event-driven processing</p>
