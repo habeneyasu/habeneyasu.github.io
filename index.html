@@ -148,7 +148,7 @@
         <div class="timeline-item animate-on-scroll">
           <div class="timeline-marker"></div>
           <div class="timeline-content">
-            <h3 class="timeline-title">Senior Software Engineer</h3>
+            <h3 class="timeline-title">Tech Lead</h3>
             <div class="timeline-company">Kacha Digital Financial Service S.C</div>
             <div class="timeline-date">December 2023 – Present | Addis Ababa, Ethiopia</div>
             <p class="timeline-summary">Enterprise USSD platform · Multi-tenant microservices architecture · Credit scoring API · KYC data pipeline</p>
@@ -416,18 +416,18 @@
         <div class="mermaid-card">
           <div class="mermaid">
 flowchart TD
-  U([User via MCP]) --> C[Coordinator]
-  C --> IA[Insights Agent]
-  C --> EA[Expense Agent]
-  C --> SA[Savings Agent]
-  C --> MA[Metrics Agent]
-  IA --> V{4-Layer Validator}
+  U(["User via MCP"]) --> C["Coordinator"]
+  C --> IA["Insights Agent"]
+  C --> EA["Expense Agent"]
+  C --> SA["Savings Agent"]
+  C --> MA["Metrics Agent"]
+  IA --> V{"4-Layer Validator"}
   EA --> V
   SA --> V
   MA --> V
-  V -->|Pass| R([Verified Response])
-  V -->|Fail| F([SQL Fallback])
-  C --- DB[(Aurora PostgreSQL)]
+  V -->|Pass| R(["Verified Response"])
+  V -->|Fail| F(["SQL Fallback"])
+  C --- DB[("Aurora PostgreSQL")]
           </div>
         </div>
         <p class="project-description architecture-description"><strong>Pattern:</strong> Coordinator decomposes intent and routes to specialized worker agents. Every LLM output passes a 4-layer validation engine (grounding ±1.5%, coverage, relevance, consistency) before release. Failed validation triggers bounded retry then deterministic SQL fallback — eliminating blind LLM output in financial contexts.</p>
@@ -438,11 +438,11 @@ flowchart TD
           <div class="mermaid-card">
             <div class="mermaid">
 flowchart LR
-  A[Ingest Docs] --> B[Chunk + Embed]
-  B --> C[(ChromaDB)]
-  C --> D[Semantic Search]
-  D --> E[LLM OpenRouter]
-  E --> F[Response + Citations]
+  A["Ingest Docs"] --> B["Chunk + Embed"]
+  B --> C[("ChromaDB")]
+  C --> D["Semantic Search"]
+  D --> E["LLM OpenRouter"]
+  E --> F["Response + Citations"]
             </div>
           </div>
           <p class="project-description architecture-description">Privacy-first architecture (documents remain local) · Modular ingestion pipeline · Metadata-aware retrieval · Multi-model LLM orchestration</p>
@@ -452,15 +452,15 @@ flowchart LR
           <div class="mermaid-card">
             <div class="mermaid">
 flowchart LR
-  A[Audio 200ms] --> B[FastAPI]
-  B --> C[(Redis Streams)]
-  C --> D[Whisper ASR]
-  C --> E[Diarization]
-  D --> F[LLM Analysis]
+  A["Audio 200ms"] --> B["FastAPI"]
+  B --> C[("Redis Streams")]
+  C --> D["Whisper ASR"]
+  C --> E["Diarization"]
+  D --> F["LLM Analysis"]
   E --> F
-  F --> G[(PostgreSQL)]
-  F --> H[WebSocket]
-  H --> I[React UI]
+  F --> G[("PostgreSQL")]
+  F --> H["WebSocket"]
+  H --> I["React UI"]
             </div>
           </div>
           <p class="project-description architecture-description">Distributed architecture for horizontal scaling · WebSocket for real-time communication · Multi-LLM orchestration · Event-driven processing</p>
@@ -470,14 +470,14 @@ flowchart LR
           <div class="mermaid-card">
             <div class="mermaid">
 flowchart TD
-  GW[API Gateway JWT] --> AS[Auth Service]
-  GW --> PS[Payment Service]
-  GW --> US[User Service]
-  GW --> NS[Notification Service]
-  PS --> K[(Kafka Event Bus)]
+  GW["API Gateway JWT"] --> AS["Auth Service"]
+  GW --> PS["Payment Service"]
+  GW --> US["User Service"]
+  GW --> NS["Notification Service"]
+  PS --> K[("Kafka Event Bus")]
   US --> K
   K --> NS
-  PS --> DB[(PostgreSQL)]
+  PS --> DB[("PostgreSQL")]
   US --> DB
             </div>
           </div>
